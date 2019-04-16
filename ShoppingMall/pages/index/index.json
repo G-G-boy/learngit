@@ -1,0 +1,12 @@
+{
+    "navigationBarBackgroundColor": "#F75352",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "喵喵商城",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh":true,
+    "onReachBottomDistance":0,
+      "usingComponents": {
+        "toast": "../../components/toast/toast"
+      }
+}

@@ -1,0 +1,41 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:400rpx;'>
+  <block wx:for="{{imgUrls}}" wx:key>
+    <swiper-item class="swiper-item">
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view class='shopname'>
+  <image class='shopimg' src='../../img/buss_03.jpg'></image>
+  <view class='shoptitle'>
+    <view class='shopmingzi'>行走力量(钟村店)</view>
+    <view class='shopposition'>营业时间：周一至周日</view>
+    <view class='shopdistance'>7:00-22:30</view>
+  </view>
+  <view class='shoptelnum'>
+    <image src='../../img/call.png'></image>
+  </view>
+</view>
+
+
+<view class='shopaddress'>
+ <image class='addressicon' src='../../img/map.png'></image>
+  <view class='addressdetail'>番禺区祈福新村C区19街祈福便利店内近祈福学校</view>
+  <view class='distance'>1公里</view>
+</view>
+
+<block wx:for="{{5}}" wx:key>
+  <view class='ticket'>
+
+      <image class='ticket-img' src="../../img/buss_03.jpg" bindtap='gocoupon'>
+      <text>这是一个title这是一个title</text>
+    </image>
+
+    <view class='price'>
+     <text class='newprice'>25.00元</text>
+     <text class='oldprice'>原价：35.00元</text>
+    </view>
+ </view>
+ </block>

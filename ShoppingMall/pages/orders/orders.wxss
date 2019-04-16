@@ -1,0 +1,96 @@
+page{background: #F7F7F7;}
+.swiper-tab{
+	width: 100%;
+  background: #FFF;
+	text-align: center;
+	line-height: 80rpx;}
+.swiper-tab-list{ 
+   font-size: 28rpx;
+   display: inline-block;
+	width: 16.66%;
+	color: #747474;
+}
+.on{ 
+  font-weight: bold;
+  color: #555;
+  padding-bottom: 18rpx;
+	border-bottom: 5rpx solid #FA4E3E;
+  }
+ 
+.swiper-box{ 
+  display: block;
+   height: 100%; 
+   width: 100%; 
+   overflow: hidden; 
+   }
+.swiper-box view{
+	text-align: center;
+}
+/* 卡片 */
+.card{
+  width: 94%;
+  height: 370rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 20rpx  auto 0;
+}
+.card-top{
+  width: 100%;
+  height: 76rpx;
+  line-height: 76rpx;
+  position: relative;
+  border-bottom: 4rpx solid #F7F7F7;
+}
+.card-top .time{
+ float: left;
+ font-size: 26rpx;
+ text-align: center;
+ margin-left: 30rpx;
+}
+.card-top .state{
+ float: right;
+ font-size: 26rpx;
+ width: 30%;
+ color: #868585;
+}
+.card .card-center{
+  width: 100%;
+  height: 200rpx;
+  display: line-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.card .card-center .submit-img{
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: 26rpx;
+  margin-left: 22rpx;
+  float: left;
+}
+.card .card-bottom{
+  width: 100%;
+  height: 86rpx;
+  line-height: 86rpx;
+  position: relative;
+   border-top: 4rpx solid #F7F7F7;
+}
+.card .card-bottom .sprice{
+ float: left;
+ font-size: 26rpx;
+ margin-left: 30rpx;
+}
+.card .card-bottom .sprice text{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.card .card-bottom .card-bottom-right{
+float: right;
+font-size: 26rpx;
+width: 30%;
+}
+.card .card-bottom .card-bottom-right text{
+  border: 2rpx solid #eee;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  color: #747474;
+}

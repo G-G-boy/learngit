@@ -1,0 +1,76 @@
+<view class='bg'></view>
+<view wx:if="{{order_submit.cancel}}" style='z-index=1000;'>
+  <view class='TOP'>交易取消</view>
+  <view class='card-top'>
+    <view class='card-top-left'>已取消</view>
+    <view class='card-top-right'>{{order_submit.submitslength}}件商品</view>
+  </view>
+  <block wx:for="{{order_submit.submits}}" wx:key>
+    <submit-card
+    title="{{item.title}}"
+    num="{{item.num}}"
+    price="{{item.price}}"
+    img="{{item.img}}"
+    />
+  </block>
+  <view class='card-bottom'></view>
+</view>
+<view wx:else>
+  <view class='TOP'>交易成功</view>
+  <view class='ReceivingInfo'>
+    <view class='ReceivingInfo-top'><text>收货信息</text></view>
+    <view class='ReceivingInfo-center'>
+    <view class='ReceivingInfo-center-box'>
+       <view class='ReceivingInfo-center-left'>收货人</view>
+      <view class='ReceivingInfo-center-right'>{{order_submit.addressinfo.userName}} {{order_submit.addressinfo.telNumber}}</view>
+    </view>
+        <view class='ReceivingInfo-center-box'>
+       <view class='ReceivingInfo-center-left'>收货地点</view>
+      <view class='ReceivingInfo-center-right'>{{order_submit.addressinfo.provinceName}}{{order_submit.addressinfo.cityName}}{{order_submit.addressinfo.countyName}}{{order_submit.addressinfo.detailInfo}}</view>
+    </view>
+
+    <view class='ReceivingInfo-center-box'>
+       <view class='ReceivingInfo-center-left'>卖家信息</view>
+      <view class='ReceivingInfo-center-right'>郭小斌 13244829131</view>
+    </view>
+
+    </view>
+    <view class='ReceivingInfo-bottom'><text>共{{order_submit.submitslength}}件商品 小计：</text>¥{{order_submit.totalPrice}}</view>
+  </view>
+
+<view class='paid-card'>
+  <view class='card-top'>
+    <view class='card-top-left'>配货中</view>
+    <view class='card-top-right'>{{order_submit.submitslength}}件商品</view>
+  </view>
+  <block wx:for="{{order_submit.submits}}" wx:key>
+    <submit-card
+    title="{{item.title}}"
+    num="{{item.num}}"
+    price="{{item.price}}"
+    img="{{item.img}}"
+    />
+  </block>
+  <view class='card-bottom'></view>
+</view>
+ <view class='orderInfo'>
+ <view class='ReceivingInfo-top'><text>订单信息</text></view>
+    <view class='ReceivingInfo-center'>
+    <view class='ReceivingInfo-center-box'>
+       <view class='ReceivingInfo-center-left'>订单编号</view>
+      <view class='ReceivingInfo-center-right'>1133455413244829131</view>
+    </view>
+        <view class='ReceivingInfo-center-box'>
+       <view class='ReceivingInfo-center-left'>下单时间</view>
+      <view class='ReceivingInfo-center-right'>{{order_submit.date_time}}</view>
+    </view>
+
+    <view class='ReceivingInfo-center-box'>
+       <view class='ReceivingInfo-center-left'>支付时间</view>
+      <view class='ReceivingInfo-center-right'>{{order_submit.date_time}}</view>
+    </view>
+
+    </view>
+    <view class='ReceivingInfo-bottom'><text>　　　　　合计：</text>¥{{order_submit.totalPrice}}</view>
+ </view>
+</view>

@@ -1,0 +1,41 @@
+<!-- 顶部轮播图 -->
+<view class='body'>
+          <swiper autoplay="true" indicator-dots="false" style="height:{{height}}px;" >
+              <block wx:for="{{homes.image}}" wx:key="{{index}}">
+                  <swiper-item>
+                      <image class='auto-img' bindload='setContainerHeight' src='{{item}}' mode="widthFix"></image>
+                  </swiper-item>
+              </block>
+          </swiper>
+    <!-- 商品信息 -->
+    <view class='information'>
+          <view class='information-top'>
+            <view class='information-top-left'>¥{{homes.price}}</view>
+                <view class='information-top-right'>
+                <view class='Triangle'></view>
+                   <view class='endtext'>结束时间</view>
+                   <view class='endtime'>02/08 13:32</view>
+                </view>
+          </view>
+            <view class='information-title'>{{homes.title}}</view>
+            <view class='information-tips'>现在下单，预计（2019-03-05）可自提</view>
+            <view class='information-volume'>已售{{homes.sold}}件，仅剩{{homes.onlyleft}}件</view>
+    </view>
+
+    <view class='details'>- <text>商 / 品 / 详 / 情</text> -</view>
+
+    <view class='second-body'>
+    <block wx:for="{{homes.image}}" wx:key>
+       <image src='{{item}}'></image>
+       </block>
+    </view>
+      
+    <view class='br'></view>
+    <!-- 详情页底部 -->
+     <view class='details-footer'>
+        <view class='toindex' bindtap='toindex'><image src='../../img/index.png'></image></view>
+        <view class='tocart' bindtap='tocart'><image src='../../img/carts.png'></image></view>
+        <view class='addcart' bindtap='addcart' data-id='{{homes.id}}'>加入购物车</view>
+        <view class='buynow' bindtap='buynow' data-id='{{homes.id}}'>立即购买</view>
+     </view>
+</view>

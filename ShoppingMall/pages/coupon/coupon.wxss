@@ -1,0 +1,232 @@
+/* pages/coupon/coupon.wxss */
+.body{width: 100%;position: relative;}
+.auto-img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.top-title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: rgba(247, 82, 82, 0.76);
+  position: absolute;
+  top: 0rpx;
+  z-index: 1000;
+}
+.top-title text{
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: bolder;
+}
+
+.sprice-block{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  border-bottom: 4rpx solid #eee;
+}
+.sprice-block .sprice{
+  margin-left: 30rpx;
+  text-align: center;
+  float: left;
+  color: #F75352;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.sprice-block  .old-sprice{
+  margin-left: 10rpx;
+   margin-top: 7rpx;
+  text-align: center;
+  float: left;
+  color: #888;
+  font-size: 28rpx;
+  text-decoration:line-through;
+}
+.sprice-block  .sold{
+  margin-left: 20rpx;
+  margin-top: 7rpx;
+  text-align: center;
+  float: left;
+  color: #888;
+  font-size: 28rpx;
+}
+.sprice-block .buynow{
+  width: 30%;
+  text-align: center;
+  float: right;
+}
+.sprice-block .buynow text{
+  color: #fff;
+  font-size: 32rpx;
+  background-color: #F75352;
+  padding: 10rpx 20rpx;
+  border-radius: 8rpx;
+}
+
+.help{
+  width: 100%;
+  height: auto;
+  margin: 10rpx auto  10rpx;
+  padding-bottom: 10rpx;
+  line-height: 34rpx;
+  text-align: center;
+  border-bottom: 4rpx solid #eee;
+}
+.help text{
+  color: #666;
+  font-size: 26rpx;
+  padding-left: 5rpx;
+}
+.item-title{
+  width: 100%;
+  height: 40rpx;
+  color: #666;
+  font-size: 32rpx;
+  padding-left: 20rpx;
+  padding-bottom: 10rpx;
+  border-bottom: 4rpx solid #eee;
+}
+
+.project{
+  width: 90%;
+  height: auto;
+  margin: 10rpx auto 10rpx;
+  background-color: #fff;
+}
+.project .project-item{
+  width: 20%;
+  height: auto;
+  text-align: center;
+  line-height: 24rpx;
+  display: inline-block;
+}
+.project .project-item .project-item-icon{
+  width: 100%;
+  height: 130rpx;
+}
+.project .project-item text{
+  color: #666;
+  font-size: 22rpx;
+}
+.shopname{
+  width: 100%;
+  height: 180rpx;
+  position: relative;
+  border-top: 4rpx solid #eee;
+  border-bottom: 4rpx solid #eee;
+}
+.shopname .shopimg{
+width: 180rpx;
+height:160rpx;
+float: left;
+margin-top: 10rpx;
+margin-left: 40rpx;
+}
+.shopname .shoptitle{
+width: 300rpx;
+height: 160rpx;
+float: left;
+margin-top: 10rpx;
+}
+.shopname .shoptitle .shopmingzi{
+  width: 100%;
+  color: #000;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.shopname .shoptitle  .shopposition{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #666;
+   margin-left: 20rpx;
+}
+.shopname .shoptitle   .shopdistance{
+  width: 100%;
+  color: #666;
+  font-size: 22rpx;
+   margin-left: 20rpx;
+}
+.shopname .shoptelnum{
+ width: 180rpx;
+ height: 180rpx;
+ float: right;
+ margin-right: 40rpx;
+ text-align: center;
+}
+.shopname .shoptelnum image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 30%;
+}
+.shopcommodity{
+  width: 100%;
+  height: 180rpx;
+}
+.shopcommodity .shopcommodity-top{
+width: 100%;
+height: 90rpx;
+line-height: 90rpx;
+text-align: center;
+border-bottom: 2rpx solid #eee;
+display: flex;
+}
+.shopcommodity .shopcommodity-top .commodity-name{
+  width: 40%;
+  color: #000;
+  font-size: 30rpx;
+  border-right: 2rpx solid #eee;
+}
+.shopcommodity .shopcommodity-top .commodity-num{
+  width: 20%;
+ color: #000;
+  font-size: 30rpx;
+}
+.shopcommodity .shopcommodity-top  .commodity-oldsprice{
+  width: 40%;
+ color: #666;
+  font-size: 30rpx;
+  text-decoration:line-through;
+  border-left: 2rpx solid #eee;
+}
+.shopcommodity .shopcommodity-bottom{
+width: 100%;
+height: 90rpx;
+line-height: 90rpx;
+border-bottom: 2rpx solid #eee;
+position: relative;
+}
+.shopcommodity .shopcommodity-bottom .shopcommodity-bottom-left{
+  float: left;
+  margin-left: 30rpx;
+  color: #F75352;
+  font-size: 30rpx;
+  height: 89rpx;
+}
+.shopcommodity .shopcommodity-bottom .shopcommodity-bottom-right{
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+.buynowbox{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.buynow1{
+  font-size: 32rpx;
+  color: #fff;
+  background-color: #F75352;
+  width: 90%;
+  text-align: center;
+  padding: 20rpx;
+  border-radius: 16rpx;
+}

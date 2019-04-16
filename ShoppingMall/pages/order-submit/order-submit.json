@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "submit-card":"../../components/submit-card/submit-card"
+  },
+        "navigationBarBackgroundColor": "#FFF",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "订单详情",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light"
+}

@@ -1,0 +1,74 @@
+
+<view class='body'>
+    <view class='user'>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userinfo-btn" > 点击微信授权 </button>
+     <block wx:else>
+      <image class='user-img' src='{{userInfo.avatarUrl}}'></image>
+      <view class='user-name'>{{userInfo.nickName}}</view>
+      <view class='user-reset' bindtap='clear'>清除资料</view></block>
+    </view>
+  
+  <view class='order'>
+      <view class='order-top'>
+       <view class='order-top-left'>我的订单</view>
+       <view class='order-top-right' bindtap='toorders' data-tid='0'>查看全部订单 <image src='../../img/right.png'></image></view>
+      </view>
+      <view class='order-bottom'>
+         <view class='order-bottom-item' wx:for-items="{{orderitem}}" wx:key>
+           <image class='order-bottom-item-img' src='{{item.imgsrc}}' data-tid='{{item.typeid}}' bindtap='toorderitem'></image>
+           <view class='order-bottom-item-name'>{{item.name}}</view>
+         </view>
+
+
+          <view class='order-bottom-item'>
+           <image class='order-bottom-item-img' src='../../img/souhou.png'></image>
+           <view class='order-bottom-item-name'>售后服务</view>
+         </view>
+      </view>
+  </view>
+  
+    <view class='form'>
+     <view class='form-item'>
+       <image class='form-item-img' src='../../img/youhui.png'></image>
+       <view class='form-text'>优惠券</view>
+       <image class='form-right' src='../../img/right.png'></image>
+     </view>
+
+
+      <view class='form-item' bindtap='goapply'>
+       <image class='form-item-img' src='../../img/tuanz.png'></image>
+       <view class='form-text'>申请成为团长</view>
+       <image class='form-right' src='../../img/right.png'></image>
+     </view>
+
+
+      <view class='form-item' bindtap='chooseAddress'>
+       <image class='form-item-img' src='../../img/address.png'></image>
+       <view class='form-text'>选择收货地址</view>
+        <image class='form-right' src='../../img/right.png'></image>
+     </view>
+
+
+      <view class='form-item'>
+       <image class='form-item-img' src='../../img/banzhu.png'></image>
+       <view class='form-text'>常见帮助</view>
+        <image class='form-right' src='../../img/right.png'></image>
+     </view>
+
+
+      <view class='form-item'>
+       <image class='form-item-img' src='../../img/kefu.png'></image>
+       <view class='form-text'>联系客服 <button class='contact' open-type='contact'></button></view>
+       <image class='form-right' src='../../img/right.png'></image>
+     </view>
+    </view>
+
+       <view class='footer'>
+         <view class='footer-left'>
+           <image  src='../../img/index.png'></image>
+         </view>
+         <view class='footer-right'>向团长出示二维码提货</view>
+       </view>
+
+</view>
+

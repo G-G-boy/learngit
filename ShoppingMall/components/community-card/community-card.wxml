@@ -1,0 +1,10 @@
+<view class='body'>
+<view class="community-card">
+ <image class='community-card-img' src='{{img}}'></image>
+ <view class='community-cardinfo'>
+  <view class='community-cardname'>{{community}}</view>
+  <view class='community-cardadress'>{{address}}</view>
+  <view class='community-cardtuanz'>团长：{{name}}</view>
+ </view>
+</view>
+</view>

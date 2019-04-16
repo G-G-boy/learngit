@@ -1,0 +1,123 @@
+.slide-image{
+  width: 100%;
+}
+.shopname{
+  width: 100%;
+  height: 180rpx;
+  position: relative;
+  border-top: 4rpx solid #eee;
+  border-bottom: 4rpx solid #eee;
+}
+.shopname .shopimg{
+width: 180rpx;
+height:160rpx;
+float: left;
+margin-top: 10rpx;
+margin-left: 40rpx;
+}
+.shopname .shoptitle{
+width: 300rpx;
+height: 160rpx;
+float: left;
+margin-top: 10rpx;
+}
+.shopname .shoptitle .shopmingzi{
+  width: 100%;
+  color: #000;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.shopname .shoptitle  .shopposition{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  color: #666;
+   margin-left: 20rpx;
+}
+.shopname .shoptitle   .shopdistance{
+  width: 100%;
+  color: #666;
+  font-size: 22rpx;
+   margin-left: 20rpx;
+}
+.shopname .shoptelnum{
+ width: 180rpx;
+ height: 180rpx;
+ float: right;
+ margin-right: 40rpx;
+ text-align: center;
+}
+.shopname .shoptelnum image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 30%;
+}
+
+.shopaddress{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  border-bottom: 2rpx solid #eee;
+}
+
+.addressicon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.addressdetail{
+  width: 70%;
+  height: 100rpx;
+  color: #333;
+  font-size: 28rpx;
+  display: flex;
+  align-items:center;
+  margin-left: 26rpx;
+  margin-right: 20rpx;
+}
+.distance{
+  font-size: 30rpx;
+  color: #555;
+}
+
+.ticket{
+  width: 100%;
+}
+.ticket-img{
+  position: relative;
+  width: 94%;
+  height: 300rpx;
+  margin-top: 24rpx;
+  margin-left: 3%;
+}
+.ticket-img text{
+  width: 100%;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+  background-color: rgba(0, 0, 0, 0.404);
+  padding: 6rpx 16rpx;
+}
+.price{
+  width: 94%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #eee;
+ margin-left: 3%;
+ margin-top: -10rpx;
+ 
+}
+.newprice{
+  color:#F44548; 
+  padding: 20rpx;
+}
+.oldprice{
+  color: #666;
+  font-size: 26rpx;
+  padding: 10rpx;
+  text-decoration: line-through;
+}

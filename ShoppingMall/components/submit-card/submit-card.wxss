@@ -1,0 +1,66 @@
+.submit-card{
+   width: 94%;
+   height: 270rpx;
+   margin: 0 auto;
+   position: relative;
+   border-bottom: 2rpx solid #eee;
+   background-color: #fff;
+}
+.submit-card .submit-card-top{
+  width: 92%;
+  height: 180rpx;
+  margin: 0 auto;
+  position: relative;
+}
+.submit-card .submit-card-top .img{
+  float: left;
+  width: 160rpx;
+  height: 160rpx;
+
+  margin-top: 20rpx;
+}
+.submit-card .submit-card-top .submit-card-top-left{
+float: left;
+width: 410rpx;
+height: 160rpx;
+margin-top: 20rpx;
+margin-left: 20rpx;
+}
+.submit-card .submit-card-top .submit-card-top-left .title{
+ width: 100%;
+ height: 50rpx;
+ line-height: 50rpx;
+ font-size: 28rpx;
+ color: #222;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.submit-card .submit-card-top .submit-card-top-left .num{
+ width: 100%;
+ height: 50rpx;
+ line-height: 50rpx;
+ font-size: 24rpx;
+ color: #666;
+}
+.submit-card .submit-card-top .submit-card-top-left .price{
+ width: 100%;
+ height: 60rpx;
+ line-height: 60rpx;
+ font-size: 30rpx;
+ color: #000;
+}
+.submit-card .submit-card-btn{
+  width: 140rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  position: absolute;
+  right: 25rpx;
+  bottom: 20rpx;
+  border-radius: 50rpx;
+  font-size: 20rpx;
+  background-color: #eee;
+}
+.submit-card .submit-card-btn::after{
+  border: none;
+}

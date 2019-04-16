@@ -1,0 +1,357 @@
+/* pages/index/index.wxss */
+.absolute{
+  position: absolute;
+  width: 100%;
+}
+.address{
+  color: #fff;
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  margin-bottom: 10rpx;
+  background:linear-gradient(#F75352,#FC5E52);
+}
+.address-left{
+  width: 76%;
+  height: 160rpx;
+  float: left;
+  padding-left: 20rpx;
+
+}
+.address-left-top{
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items:flex-end ;
+  margin-left: 20rpx;
+}
+.address-left-text{
+  padding: 10rpx;
+  font-size: 30rpx;
+}
+.address-left-tab{
+ padding: 10rpx;
+  font-size: 28rpx;
+}
+.address-left-address{
+  font-size: 26rpx;
+  line-height: 64rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 30rpx;
+}
+.address-right{
+  width: 22%;
+  height: 160rpx;
+  float: right;
+}
+#address-right-tu{
+  width: 50%;
+  height: 50%;
+  border: 1rpx solid #fff;
+  border-radius: 50%;  
+}
+.address-right-name{
+  font-size: 28rpx;
+
+}
+
+/* 轮播图 */
+
+.swiper-block{
+  height: 370rpx;
+  width: 100%;
+}
+.swiper-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow:unset;
+}
+.slide-image{
+  height:320rpx;
+  width: 520rpx;
+  border-radius: 9rpx;
+  box-shadow: 0px 0px 30rpx rgba(0, 0,0,.2); 
+  margin: 0rpx 30rpx;
+  z-index: 1;  
+}
+.activ{
+  transform: scale(1.14);
+  transition:all .2s ease-in 0s;
+  z-index: 20; 
+}
+
+
+
+/* ------------------ */
+
+.juzhong{
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  text-align: center;
+}
+.announcement{
+  display: flex;
+  height: 60rpx;
+  padding-left: 30rpx;
+  border-radius: 30rpx ;
+  margin: 20rpx 5% 20rpx 5%;
+  font-size: 24rpx;
+  background:  linear-gradient(to right ,#F75352,#FC5E52);
+  color: #fff;
+}
+.announcement image{
+  margin-top: 2.5%;
+  width: 30rpx;
+  height: 30rpx;
+}
+.announcement text{
+  line-height: 60rpx;
+  margin-left: 20rpx;
+}
+.tab{
+  display: flex;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #898989;
+  margin: 0rpx 5% 20rpx 5%;
+  line-height: 80rpx;
+  border-bottom: 4rpx solid #F24C50;
+}
+.tab #btn-left{
+  padding-left: 20rpx; 
+  padding-right: 20rpx;
+  height: 80rpx;
+}
+
+.tab #btn-right{
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  height: 80rpx;
+}
+
+.count-down{
+  margin-left: 20%;
+}
+
+.selected{
+  background: linear-gradient(to bottom right, #FA6466 , #FC494C);
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  color: #fff;
+}
+.defaul{
+  background-color: #fff;
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+.swiper-tab{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 30rpx;
+}
+.swiper-tab-item{
+  color: #747273;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+}
+.move-bg{
+  background-color: #fff;
+}
+.active{
+  color: #0e0e0e;
+  font-weight:bold;
+  border-bottom: 4rpx solid #F97D65;
+}
+.index-card{
+  position: relative;
+  width: 90%;
+  height: 250rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  box-shadow:4px 4px 10px #EEE;
+  margin-bottom: 60rpx;
+  background-color: #fff;
+}
+.index-card-left{
+  width: 40%;
+  height: 100%;
+  float: left;
+   text-align: center;
+}
+.index-card-img{
+  width: 86%;
+  height: 86%;
+  border-radius: 12rpx;
+  margin-top: 7%;
+}
+.index-card-right{
+  width: 60%;
+  height: 100%;
+  float: right;
+}
+.index-card-name{
+  float: left;
+  font-size: 32rpx;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: 3%;
+  color: #424242;
+}
+.index-card-time{
+float: left;
+width: 100%;
+font-size: 28rpx;
+color: #DE7262;
+margin-top: 2%;
+}
+.index-card-quantity{
+ font-size: 24rpx;
+ color: #888888;
+ margin-top: 3%;
+}
+.index-card-price{
+  color: #FC5340;
+  width: 100%;
+  margin-top: 12%;
+}
+.index-card-price image{
+  width: 35rpx;
+  height: 35rpx;
+  float: right;
+  margin-right: 20rpx;
+  border-radius: 50%;
+  padding: 10rpx;
+  background: linear-gradient(to bottom right, #FD7D7C , #FB5849);
+}
+/* .ticket{
+  width: 100%;
+}
+.ticket-img{
+  position: relative;
+  width: 86%;
+  height: 340rpx;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+  margin-left: 7%;
+  box-shadow: 0px 0px 30rpx rgba(226, 86, 30, 0.2); 
+}
+.ticket-img text{
+  width: 100%;
+  color: #fff;
+  font-size: 22rpx;
+  position: absolute;
+  left: 0rpx;
+  bottom: 10rpx;
+  background-color: rgba(0, 0, 0, 0.404);
+  padding: 6rpx 16rpx;
+  
+} */
+.ticket{
+  width: 100%;
+}
+.ticket-img{
+  position: relative;
+  width: 94%;
+  height: 300rpx;
+  margin-top: 24rpx;
+  margin-left: 3%;
+}
+.ticket-img text{
+  width: 100%;
+  color: #fff;
+  font-size: 24rpx;
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+  background-color: rgba(0, 0, 0, 0.404);
+  padding: 6rpx 16rpx;
+}
+.price{
+  width: 94%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #eee;
+ margin-left: 3%;
+ margin-top: -10rpx;
+ 
+}
+.newprice{
+  color:#F44548; 
+  padding: 20rpx;
+}
+.oldprice{
+  color: #666;
+  font-size: 26rpx;
+  padding: 10rpx;
+  text-decoration: line-through;
+}
+
+
+
+
+
+
+/* --------------------------------------------------- */
+swiper-item{
+ height: 100%;
+ overflow:scroll;
+ overflow-x:hidden;
+}
+scroll-view {
+  height: 100%;
+}
+
+/* tab栏的吸顶 */
+.stickyClass{
+    position: sticky;
+    top: 0rpx ;
+}
+#swiper-tab{
+  background-color: #fff;
+  z-index: 1;
+  border-right: 40rpx solid #fff;
+  border-left: 40rpx solid #fff;
+}
+
+.out{
+  display: none;
+}
+
+
+
+.nav{
+  width: 96%;
+  margin: 0 auto;
+  height:75rpx;
+  background-color: #fff;
+  color: #666;
+  font-size: 30rpx;
+  white-space: nowrap;
+  display: flex;
+  z-index: 2000;
+}
+.cu-item{
+  display:inline-block;
+  width: 120rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+}
+.cur{
+  font-weight: bold;
+  border-bottom: 4rpx solid #F24C50;
+}

@@ -1,0 +1,117 @@
+page {
+  background-color: #f7f7f7;
+}
+.bg{
+   background:linear-gradient(#F75352,#F78469);
+  width: 100%;
+  height: 300rpx;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.TOP{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bolder;
+  color: #fff;
+}
+.card-top {
+  width: 94%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #eee;
+  position: relative;
+}
+
+.card-top .card-top-left {
+  float: left;
+  font-size: 24rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.card-top .card-top-right {
+  float: right;
+  font-size: 24rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.card-bottom{
+  width: 94%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  background-color: #fff;
+  margin: 0 auto 20rpx;
+}
+.ReceivingInfo{
+  margin-bottom: 20rpx;
+}
+
+.ReceivingInfo-top{
+  width: 94%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-bottom: 2rpx solid #eee;
+}
+.ReceivingInfo-top text{
+   font-size: 24rpx;
+  color: #333;
+  padding-left: 20rpx;
+}
+.ReceivingInfo-bottom{
+  width: 94%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  font-size: 30rpx;
+}
+.ReceivingInfo-bottom text{
+     font-size: 24rpx;
+  color: #333;
+  padding-left: 400rpx;
+}
+.ReceivingInfo-center{
+ width: 94%;
+ height: 180rpx;
+ background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 2rpx solid #eee;
+}
+.ReceivingInfo-center-box{display: block;height: 60rpx;width: 100%;}
+.ReceivingInfo-center .ReceivingInfo-center-left{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  float: left;
+  padding-left: 20rpx;
+  color: #888;
+}
+.ReceivingInfo-center .ReceivingInfo-center-right{
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  float: right;
+  padding-right: 20rpx;
+}
+.orderInfo{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}

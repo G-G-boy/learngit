@@ -1,0 +1,3 @@
+<view class='wx_toast_container' hidden="{{!toastShow}}">  
+  <image class='gif' src='../../img/loading.gif'></image>
+</view>

@@ -1,0 +1,58 @@
+<view wx:if="{{hasList}}">
+
+
+
+<view class='cart'  wx:for="{{carts}}" wx:key>
+<view class='cart-box'>
+ <view class='cart-box-icon'> 
+     <icon wx:if="{{item.selected}}" type="success" size="40rpx" color='#FB6554' bindtap="selectList" data-index="{{index}}"/>
+     <icon wx:else type="circle" bindtap="selectList" size="40rpx" data-index="{{index}}"/>
+ </view>
+ <image class='cart-box-img' src="{{item.img}}" bindtap='todetail' data-item='{{item}}'></image>
+ <view class='cart-box-right'>
+   <view class='cart-box-right-top'>
+        <view class='cart-box-right-title'>{{item.title}}</view>
+        <view class='cart-box-right-del' bindtap="deleteList" data-index="{{index}}"  data-id='{{item.id}}'><image src='../../img/del.png'></image></view>
+   </view> 
+   <view class='cart-box-right-bottom'>
+         <view class='cart-box-right-price'>¥{{item.price}}</view>
+        <view class='cart-box-right-number'>
+            <image class='count' bindtap="minusCount" data-index="{{index}}" data-id='{{item.id}}' src='../../img/count.png'></image>
+                  <text class='number'>{{item.num}}</text>
+            <image class='add' bindtap="addCount" data-index="{{index}}" data-id='{{item.id}}' src='../../img/add.png'></image>
+         </view>
+   </view>
+ </view>
+</view>
+</view>
+
+
+
+
+
+ 
+
+
+
+<view class='br'></view>
+
+ <view class='footer'>
+   <view class='footer-body'>
+    <view class='selectall'> 
+    <icon  wx:if="{{selectAllStatus}}" type="success" size="40rpx" color='#FB6554' bindtap="selectAll"/>
+     <icon wx:else type="circle"  size="40rpx" bindtap="selectAll"/>
+    </view>
+    <text>全部</text>
+    <view class='allprice' >合计:¥{{totalPrice}}</view>
+    <view class='settlement' bindtap='gosubmit'  data-totalPrice='{{totalPrice}}'>去结算({{allnumber}})</view>
+   </view>
+</view>
+
+</view>
+<view wx:else>
+<view class='body'>
+  <image src='../../img/fullbox.png'></image>
+  <view class='text'>购物车空空如也，赶紧去逛逛吧~</view>
+  <view class='button' size='mini' bindtap='goindex'>去购物</view>
+</view>
+</view>

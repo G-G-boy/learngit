@@ -1,0 +1,96 @@
+    <view class='body'>
+          <!-- <view class='top-title'><text>这是一张消费卡</text></view>  -->
+          <swiper autoplay="true" indicator-dots="false" style="height:{{height}}px;" >
+          
+                  <swiper-item>
+                      <image class='auto-img' bindload='setContainerHeight' src='../../img/buss_03.jpg' mode="widthFix"></image>
+                  </swiper-item>
+                   <swiper-item>
+                      <image class='auto-img' bindload='setContainerHeight' src='../../img/buss_03.jpg' mode="widthFix"></image>
+                  </swiper-item>
+          </swiper>
+            <view class='sprice-block'>
+                  <view class='sprice'>¥10.00</view>
+                  <view class='old-sprice'>¥100.00</view>
+                  <view class='sold'>已售:10</view>
+                  <view class='buynow'><text>立即购买</text></view>
+            </view>
+         <view class='help'>
+          <text>使用说明：购买卡券后，即可免费到店享受卡券所有服务项目；卡券的服务项目每天增加，即日购买，1年内使用有效。</text>
+          </view>
+          <!-- <view class='item-title'>本卡券包含以下服务</view>
+          <view class='project'>
+            <view class='project-item'>
+             <image class='project-item-icon' src='../../img/map.png'></image>
+              <text>项目名称</text>
+            </view>
+          </view> -->
+<block wx:for="{{ceshi}}" wx:key>
+
+          <view class='shopname'>
+             <image class='shopimg' src='../../img/buss_03.jpg' bindtap='Toshopdetails'></image>
+             <view class='shoptitle'>
+               <view class='shopmingzi'>行走力量</view>
+               <view class='shopposition'>钟村牌坊</view>
+               <view class='shopdistance'>1.1km</view>
+             </view>
+             <view class='shoptelnum'>
+               <image src='../../img/call.png'></image>
+             </view>
+          </view>
+     <block>
+          <view class='shopcommodity'>
+             <view class='shopcommodity-top'>
+               <view class='commodity-name'>商品名称</view>
+               <view class='commodity-num'>剩余数量</view>
+               <view class='commodity-oldsprice'>原价100.00</view>
+             </view>
+             <view class='shopcommodity-bottom'>
+              <view class='shopcommodity-bottom-left'>查看图文详情</view>
+              <image class='shopcommodity-bottom-right' src='../../img/right.png'></image>
+             </view>
+          </view>
+
+
+
+                    <view class='shopcommodity'>
+             <view class='shopcommodity-top'>
+               <view class='commodity-name'>商品名称</view>
+               <view class='commodity-num'>剩余数量</view>
+               <view class='commodity-oldsprice'>原价100.00</view>
+             </view>
+             <view class='shopcommodity-bottom'>
+              <view class='shopcommodity-bottom-left'>查看图文详情</view>
+              <image class='shopcommodity-bottom-right' src='../../img/right.png'></image>
+             </view>
+          </view>
+
+
+
+
+                    <view class='shopcommodity'>
+             <view class='shopcommodity-top'>
+               <view class='commodity-name'>商品名称</view>
+               <view class='commodity-num'>剩余数量</view>
+               <view class='commodity-oldsprice'>原价100.00</view>
+             </view>
+             <view class='shopcommodity-bottom'>
+              <view class='shopcommodity-bottom-left'>查看图文详情</view>
+              <image class='shopcommodity-bottom-right' src='../../img/right.png'></image>
+             </view>
+          </view>
+     </block>
+
+    </block>      
+
+
+
+
+
+          
+
+
+   <view class='buynowbox'>
+      <view class='buynow1'>立即购买</view>
+   </view>
+    </view>

@@ -1,0 +1,11 @@
+<view class="submit-card">
+  <view class='submit-card-top'>
+    <image class='img' src="{{img}}"></image>
+    <view class='submit-card-top-left'>
+      <view class='title'>{{title}}</view>
+      <view class='num'>数量：{{num}}</view>
+      <view class='price'>¥{{price}}</view>
+    </view>
+  </view>
+  <button class='submit-card-btn' open-type='contact'>联系客服</button>
+</view>

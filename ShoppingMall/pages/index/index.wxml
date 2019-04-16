@@ -1,0 +1,166 @@
+<view class="absolute " style="{{mencen?'z-index:-1':''}};filter:blur({{(720-swiperscroll)*0.1}}px);">
+
+<view class='address'>
+  <view class='address-left'>
+       <view class='address-left-top'>
+          <view class='address-left-text'>{{item.community}}</view>
+         
+           <view class='address-left-tab' bindtap='tocommunity' data-item="{{item}}">切换></view>
+      
+       </view>
+   
+            <view class='address-left-address'>{{item.address}}</view>
+  </view>
+  <view class='address-right'>
+    <view class='juzhong'>
+       <image id='address-right-tu' src='{{item.img}}'></image>
+       <view class='address-right-name'>{{item.name}}</view>
+    </view>
+        
+  </view>
+</view>
+<!-- 轮播图 -->
+  <swiper  circular="true" autoplay="true" interval="5000" 
+   class="swiper-block"  previous-margin="90rpx" next-margin="90rpx" current="0" bindchange="swiperChange">
+    <block wx:for="{{Images}}" wx:key wx:index="{{index}}">
+        <swiper-item class="swiper-item">
+            <image mode="aspectFill" src="{{item.img_url}}" class="slide-image {{swiperIndex == index ? 'activ' : ''}}"/>
+        </swiper-item>
+    </block>
+</swiper>
+
+
+
+<view class='announcement'><image src='../../img/announcement.png'></image><text>这是一条公告庆</text></view>
+
+<view class='tab'>
+  <view id='btn-right' class="{{selected1?'selected':'defaul'}}" bindtap='selected1'>正在抢购</view>
+  <view id='btn-left' class="{{selected?'selected':'defaul'}}" bindtap='selected'>即将开抢</view>
+ 
+  <view id='btn-right' class="{{selected2?'selected':'defaul'}}" bindtap='selected2'>联盟卡券</view>
+  <view class='count-down'></view>
+</view>
+
+</view>
+
+
+<view class="move {{none?'out':''}} " style="height:{{swiperscroll}}rpx;background-color:{{mencen?'':''}};"></view>
+
+<view class="{{selected?'show':'hidden'}}">
+   <view class='swiper-tab stickyClass'  id='swiper-tab'>
+  
+     <view  class="swiper-tab-item {{currentTab==0?'active':''}}" data-current='0' bindtap='clickTab' >全部</view>
+     <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current='1' bindtap='clickTab'>女装</view>
+     <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current='2' bindtap='clickTab'>男装</view>
+     <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current='3' bindtap='clickTab'>鞋包</view>
+   </view>
+                                                                                       
+     <swiper current="{{currentTab}}" duration="300" bindchange="swiperTab"  style="height:{{windowHeight-37}}px">
+            <swiper-item class="move-bg">
+            <scroll-view scroll-y="{{true}}" style="height: {{windowHeight?windowHeight-37+'px':'auto'}};" bindscroll="scroll" lower-threshold="0" bindscrolltolower="loadmore">
+
+
+
+                <view class='index-card' wx:for="{{homes}}" wx:key  bindtap='godetails' data-details='{{item}}'>
+                    <view class='index-card-left'>
+                      <image class='index-card-img' src='{{item.img}}'></image>
+                    </view>
+                        <view class='index-card-right'>
+                          <view class='index-card-name'>{{item.title}}</view>
+                          <view class='index-card-time'>仅剩1天03:03:03</view>
+                          <view class='index-card-quantity'>已售{{item.sold}}件/仅剩{{item.onlyleft}}件</view>
+                          <view class='index-card-price'>¥{{item.price}}
+                          
+                           <image src='../../img/whitecarts.png' data-id='{{item.id}}' data-index='{{index}}' catchtap='addcart'></image>
+                          </view>
+                        </view>
+                </view>
+
+
+
+
+
+               </scroll-view>
+            </swiper-item>
+            <swiper-item class="move-bg">
+                <view>女装</view>
+            </swiper-item>
+            <swiper-item class="move-bg">
+                <view>男装</view>
+            </swiper-item>
+            <swiper-item class="move-bg">
+                <view>鞋包</view>
+            </swiper-item>
+     </swiper>
+
+</view>
+
+
+<view class="{{selected1?'show':'hidden'}}">
+
+
+<scroll-view scroll-x class='nav stickyClass' scroll-with-animation scroll-left="{{scrollLeft}}" >
+    <view class="cu-item" wx:for="{{homes1}}" wx:key >
+
+    <text  class="{{index==TabCur?'cur':''}}" bindtap='tabSelect' data-id="{{index}}">  {{item.tab}}</text>
+     
+    </view> 
+</scroll-view>
+
+<view class="{{TabCur==index?'show':'hidden'}}" wx:for="{{homes1}}" wx:key>
+
+                <view class='index-card' wx:for="{{item.shop}}" wx:key  bindtap='godetails' data-details='{{item}}'>
+                    <view class='index-card-left'>
+                      <image class='index-card-img' src='{{item.img}}'></image>
+                    </view>
+                        <view class='index-card-right'>
+                          <view class='index-card-name'>{{item.title}}</view>
+                          <view class='index-card-time'>仅剩1天03:03:03</view>
+                          <view class='index-card-quantity'>已售{{item.sold}}件/仅剩{{item.onlyleft}}件</view>
+                          <view class='index-card-price'>¥{{item.price}}
+                          
+                           <image src='../../img/whitecarts.png' data-id='{{item.id}}' data-index='{{index}}' catchtap='addcart1'></image>
+                          </view>
+                        </view>
+                </view>
+
+
+</view>
+
+
+</view>
+
+
+<view class="{{selected2?'show':'hidden'}}">
+ <!-- <view class='ticket'>
+      <image class='ticket-img' src="../../img/buss_03.jpg" bindtap='gocoupon'>
+      <text>这是一张消费卡</text>
+    </image>
+ </view> -->
+<block wx:for="{{5}}" wx:key>
+<view class='ticket'>
+
+      <image class='ticket-img' src="../../img/buss_03.jpg" bindtap='gocoupon'>
+      <text>这是一个title这是一个title</text>
+    </image>
+
+    <view class='price'>
+     <text class='newprice'>25.00元</text>
+     <text class='oldprice'>原价：35.00元</text>
+    </view>
+ </view>
+</block>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+

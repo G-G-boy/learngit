@@ -1,0 +1,38 @@
+<!--pages/classification/classification.wxml-->
+<view class='classify'>
+    <view class='left-nav'>
+       <view class='left-nav-item'>全部</view>
+        <view class='left-nav-item active'>女装</view>
+         <view class='left-nav-item'>男装</view>
+          <view class='left-nav-item'>鞋包</view>
+           
+    </view>
+    <scroll-view class='scroll-view' scroll-y="true">
+          <view class='right-goods'>
+              <view class='right-goods-item'>
+                    <view class='goods-left'>
+                      <image class='img' src='../../img/4x3-3.jpg'></image>
+                    </view>
+                    <view class='goods-right'>
+                      <view class='goods-name'>这是一只可爱的小猫啊啊啊啊</view>
+                      <view class='goods-price'>¥99.00
+                       <image src='../../img/whitecarts.png'></image>
+                      </view>
+                    </view>
+              </view>
+
+
+
+
+
+              
+
+
+
+
+          </view>
+    </scroll-view>
+</view>
+
+ 
+

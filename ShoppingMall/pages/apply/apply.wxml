@@ -1,0 +1,50 @@
+<block wx:if="{{unhidden}}">
+<view class='apply-title'>
+  <text>申请团长身份，需要你填写真实姓名、手机</text>
+</view>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='name comsty'>
+  <text class='text-l'>姓名</text>
+  <input class='input-r' value='{{captainname}}' name="name" type='text' placeholder-style='font-size:28rpx;color:#999;' placeholder='请输入姓名'></input>
+  </view>
+    <view class=' comsty'>
+  <text class='text-l'>手机号</text>
+  <input class='input-r' value='{{telnum}}' name="telphone" type='number' placeholder-style='font-size:28rpx;color:#999;' placeholder='请输入手机号码'></input>
+  </view>
+    <view class=' comsty'>
+  <text class='text-l'>微信号</text>
+  <input class='input-r' value='{{name}}' name="wxhao" type='text' placeholder-style='font-size:28rpx;color:#999;' placeholder='请输入微信号'></input>
+  </view>
+      <view class=' comsty'>
+  <text class='text-l'>小区名称</text>
+  <input class='input-r' value='{{name}}' name="villagename" type='text' placeholder-style='font-size:28rpx;color:#999;' placeholder='请输入小区名称'></input>
+  </view>
+
+        <view class=' comsty'>
+  <text class='text-l'>选择地区</text>
+      <picker mode="region" name="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker" >
+          {{region[0]}} {{region[1]}} {{region[2]}}
+        </view>
+      </picker>
+  </view>
+   <view class=' comsty'>
+   <text class='text-l'>经度纬度</text>
+    <input class='input-r'  value='{{latitude}}{{longitude}}' name="position" type='digit' placeholder-style='font-size:28rpx;color:#999;width:100%;' placeholder='点击右侧按钮获取经纬度' disabled="true"></input>
+    <image class='map' src='../../img/map.png' bindtap='getposition'></image>
+  </view>
+   <view class=' comsty'>
+   <text class='text-l'>详细地址</text>
+    <input class='input-r' value='{{location}}' name="detailedaddress" type='text' placeholder-style='font-size:28rpx;color:#999;' placeholder='请输入详细地址'></input>
+  </view>
+  
+<button class='form-btn' form-type='submit'>提交申请</button>
+</form>
+
+</block>
+<view class='applying' wx:else>
+          <image src='../../img/apply.png'></image>
+      <view class='applytext'><text>团长信息审核中...</text></view>
+</view>
+

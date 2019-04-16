@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "community-card": "../../components/community-card/community-card"
+  },
+      "navigationBarBackgroundColor": "#F75352",
+      "navigationBarTextStyle": "white",
+      "navigationBarTitleText": "喵喵喵~",
+      "backgroundColor": "#fff",
+      "backgroundTextStyle": "dark"
+}

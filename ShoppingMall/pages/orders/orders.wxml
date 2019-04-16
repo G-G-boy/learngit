@@ -1,0 +1,95 @@
+<view class="swiper-tab" >
+    <view class="swiper-tab-list"><text class="{{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部</text></view>
+    <view class="swiper-tab-list"><text class="{{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">待付款</text></view>
+    <view class="swiper-tab-list"><text class="{{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">待配送</text></view>
+    <view class="swiper-tab-list"><text class="{{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">配送中</text></view>
+    <view class="swiper-tab-list"><text class="{{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">待提货</text></view>
+     <view class="swiper-tab-list"><text class="{{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">已提货</text></view>
+</view>
+ 
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight-42}}px" bindchange="bindChange">
+
+    <swiper-item>
+       <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight-42+'px':'auto'}}" >
+              
+              <view class='card' wx:for="{{allorder}}" wx:key>
+                <view class='card-top'>
+                 <view class='time'>下单时间：{{item.date_time}}</view>
+                 <view class='state'>{{item.state}}</view>
+                </view>
+                <view class='card-center'>
+                <block wx:for="{{item.submits}}" wx:key>
+                  <image class='submit-img' src='{{item.img}}'></image>  
+                  </block>             
+                </view>
+                <view class='card-bottom'>
+                  <view class='sprice'>共{{item.submitslength}}件商品 实付：<text>¥{{item.totalPrice}}</text></view>
+                  
+                  <view class='card-bottom-right'><text bindtap='toordersubmit' data-item='{{item}}'>查看详情</text></view>
+                </view>
+              </view>
+
+               <view style='height:20rpx;background-color: #F7F7F7;'></view>
+
+     </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+           <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight-42+'px':'auto'}}" >
+              
+              <view class='card' wx:for="{{cancelorder}}" wx:key>
+                <view class='card-top'>
+                 <view class='time'>下单时间：{{item.date_time}}</view>
+                 <view class='state'>{{item.state}}</view>
+                </view>
+                <view class='card-center'>
+                <block wx:for="{{item.submits}}" wx:key>
+                  <image class='submit-img' src='{{item.img}}'></image>  
+                  </block>             
+                </view>
+                <view class='card-bottom'>
+                  <view class='sprice'>共{{item.submitslength}}件商品 实付：<text>¥{{item.totalPrice}}</text></view>
+                  
+                  <view class='card-bottom-right'><text bindtap='toordersubmit' data-item='{{item}}'>查看详情</text></view>
+                </view>
+              </view>
+
+               <view style='height:20rpx;background-color: #F7F7F7;'></view>
+
+     </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+    <scroll-view scroll-y="{{true}}" style="height: {{winHeight?winHeight-42+'px':'auto'}}" >
+         <view class='card' wx:for="{{paidorder}}" wx:key>
+                <view class='card-top'>
+                 <view class='time'>下单时间：{{item.date_time}}</view>
+                 <view class='state'>{{item.state}}</view>
+                </view>
+                <view class='card-center'>
+                <block wx:for="{{item.submits}}" wx:key>
+                  <image class='submit-img' src='{{item.img}}'></image>  
+                  </block>             
+                </view>
+                <view class='card-bottom'>
+                  <view class='sprice'>共{{item.submitslength}}件商品 实付：<text>¥{{item.totalPrice}}</text></view>
+                  
+                  <view class='card-bottom-right'><text bindtap='toordersubmit' data-item='{{item}}'>查看详情</text></view>
+                </view>
+              </view>
+              <view style='height:20rpx;background-color: #F7F7F7;'></view>
+     </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <view>配送中</view>
+    </swiper-item>
+
+    <swiper-item>
+      <view>待提货</view>
+    </swiper-item>
+
+    <swiper-item>
+      <view>已提货</view>
+    </swiper-item>
+</swiper>

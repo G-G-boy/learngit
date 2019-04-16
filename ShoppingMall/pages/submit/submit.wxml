@@ -1,0 +1,46 @@
+<view class="wraper">
+	<!-- 收货地址 -->
+  <view wx:if="{{addAddress}}">
+  <view class='box'>
+    <view class='boxtext' bindtap='addAddres'>+添加收货地址</view>
+  </view>
+</view>
+<block wx:else>
+<view class='top'>
+	<view class="address">
+		<view class='address-top'>
+			<text class="name">收货人：{{addressinfo.userName}}</text><text class="number">手机号：{{addressinfo.telNumber}}</text>
+		</view>
+		<view class='address-address'>
+		{{addressinfo.provinceName}}{{addressinfo.cityName}}{{addressinfo.countyName}}{{addressinfo.detailInfo}}
+		</view>
+	</view>
+     <view class='toaddress' bindtap='addAddres'><image src='../../img/right.png'></image></view>
+</view></block>
+	<!-- 商品订单详情 -->
+	<view class="productDetails">
+
+		<view class="orderListDetails" wx:for="{{submit}}" wx:key>
+			<view class="productImg">
+				<image src="{{item.img}}"></image>
+			</view>
+			<view class="productInfo">
+				<view class="productTitle">{{item.title}}</view>
+         <view class='hhh'></view>
+				<text class="productPrice">￥{{item.price}}</text>
+				<text class="productQuantity">x{{item.num}}</text>
+			</view>
+		</view>
+
+  <view style='height:100rpx;	background: #F7F7F7;'></view>
+	</view>	
+	<!-- 提交订单 -->
+	<view class="submitOrder">
+		<view bindtap="topay" class="submit" bindtap='payment'>
+			<button class="submitBtn"  >去支付</button>
+		</view>
+		<view class="account">
+			<view class="count">合计: <text class="price">￥{{totalPrice}}</text></view>
+		</view>
+	</view>
+</view>

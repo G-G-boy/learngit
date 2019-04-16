@@ -1,0 +1,29 @@
+<view class='bg'></view>
+<view class="input">
+  <view class='input-left'>广州市</view>
+  <view class='input-right'>请输入小区名称</view>
+</view>
+<view class='communitynow'>
+  <text>当前社区</text>
+  <navigator open-type="switchTab" url='../index/index'>
+    <image class='img' src='{{item.img}}'></image>
+  </navigator>
+  <view class='communityinfo'>
+    <view class='tuanzhang'>团长：{{item.name}}</view>
+    <view class='communityname'>{{item.community}}</view>
+    <view class='adressinfo'>{{item.address}}</view>
+  </view>
+</view>
+<view class='communitytitle'>
+  <text>附近社区</text>
+</view>
+<block wx:for="{{community}}" wx:key>
+    <community-card
+      community="{{item.community}}"
+      name="{{item.name}}"
+      img="{{item.img}}"
+      address="{{item.address}}"
+      bindtap="toindex"
+      data-item="{{item}}"
+    />
+</block>
