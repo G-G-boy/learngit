@@ -1,0 +1,56 @@
+/* pages/douban/douban.wxss */
+.item-header{
+  height: 30px;
+}
+
+.text-left{
+  line-height: 30px;
+  font-size: 14px;
+}
+.text-right{
+  line-height: 30px;
+   font-size: 14px;
+   color: #1296db;
+}
+
+.item-card{
+  height: 150px;
+  white-space:nowrap;
+ overflow-x:auto;
+ display: flex;
+}
+.item-card-card{
+   height: 130px;
+   width: 20%;
+   margin-left: 10px;
+   display: inline-block;
+}
+
+.item-card-img{
+  height: 110px;
+  width: 100%;
+  border-radius: 5px;
+
+}
+.item-card-text{
+  font-size: 12px;
+  width: 100%;
+   overflow: hidden;
+
+}
+
+
+.item-card-xin{
+
+  font-size: 10px;
+}
+.item-card-xin-right{
+  float: right;
+  font-size: 10px;
+}
+
+.hr{
+  width: 100%;
+  height: 20px;
+  background-color: #f8f9fb;
+}

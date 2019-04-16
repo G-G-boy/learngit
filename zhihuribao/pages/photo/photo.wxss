@@ -1,0 +1,10 @@
+.image{
+  width: 750rpx;
+  height: 750rpx;
+}
+.btn{
+  margin: 20rpx;
+}
+.btnbox{
+  padding:0rpx 60rpx;
+}

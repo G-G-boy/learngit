@@ -1,0 +1,60 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"uglifyFileName": true
+	},
+	"cloudfunctionRoot": "cloudfunction/",
+	"compileType": "miniprogram",
+	"libVersion": "2.6.2",
+	"appid": "wx45b84c1d40628aea",
+	"projectname": "zhihu",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": 0,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": "id=oIJ4A5QJhQf3I6DbUlsFqJcT4DCU",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "photo",
+					"pathName": "pages/photo/photo",
+					"query": "id=XJCkzsDR1TiN_ptB",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "add",
+					"pathName": "pages/add/add",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

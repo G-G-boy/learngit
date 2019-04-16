@@ -1,0 +1,9 @@
+.thumb-class{
+  border-radius: 100%;
+  
+}
+.upbtn{
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+}

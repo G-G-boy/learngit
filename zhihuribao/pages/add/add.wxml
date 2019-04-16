@@ -1,0 +1,1 @@
+<van-button round type="primary" bind:click="upload">圆形按钮</van-button>

@@ -1,0 +1,31 @@
+/* pages/logs/logs.wxss */
+.item-card-card{
+   height: 130px;
+   width: 20%;
+   margin: 20px 6.6% 20px 6.6%;
+   display: inline-block;
+}
+
+.item-card-img{
+  height: 110px;
+  width: 100%;
+  border-radius: 5px;
+
+}
+.item-card-text{
+  font-size: 12px;
+  width: 100%;
+   overflow: hidden;
+  white-space:nowrap;
+  text-align: center;
+}
+
+
+.item-card-xin{
+
+  font-size: 10px;
+}
+.item-card-xin-right{
+  float: right;
+  font-size: 10px;
+}

@@ -1,0 +1,50 @@
+
+  <scroll-view
+    scroll-y
+    style="height: {{windowHeight}}px;"
+  
+     bindscrolltolower="loadmore"
+
+   
+  >
+
+<view>
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  class='swiper'
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item  class='banner'>
+      <image src="{{item.image}}" class="slide-image" width="355"   mode="widthFix"   bindtap='gonews' data-id='{{item.id}}' />
+    <text>{{item.title}}</text>
+    </swiper-item> 
+  </block>
+</swiper>
+</view>
+
+<view  class='list'  >
+
+<block  wx:for="{{list}}" wx:key="{{ index }}" wx:for-item="stories">
+  <view class='date'>
+ {{stories.mydate}}
+</view>
+
+   <view class='item'  wx:for="{{ stories.mystories }}"   bindtap='gonews' wx:key="{{ item.id }}"  data-id='{{item.id}}'>    
+      <view class='item-wai'><view  class = 'item-view'>  {{item.title}}  </view></view>
+       <view  class='img'>
+     <image  src="{{item.images}}"></image>
+    </view>
+    
+   </view>
+    <view class='date' wx:if="{{xianshi}}"></view>
+</block>
+
+</view>
+
+
+</scroll-view>
+
+

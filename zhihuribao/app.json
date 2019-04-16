@@ -1,0 +1,47 @@
+{
+  "cloud":true,
+  "pages": [
+      "pages/index/index",
+          "pages/cloudindex/cloudindex",
+     
+        "pages/user/user",
+        "pages/add/add",
+        "pages/photo/photo",
+       "pages/douban/douban",
+      "pages/logs/logs",
+        "pages/news/news"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "豆汁阅读",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"img/新闻 1.png",
+        "selectedIconPath":"img/新闻.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/douban/douban",
+        "iconPath": "img/电影.png",
+        "selectedIconPath": "img/电影1.png",
+        "text": "电影"
+      },
+            {
+              "pagePath": "pages/cloudindex/cloudindex",
+              "iconPath": "img/相册.png",
+              "selectedIconPath": "img/相册1.png",
+              "text": "云相册"
+            }
+    ],
+    "selectedColor":"#1296db",
+    "borderStyle":"white"
+  }
+
+ 
+  
+}

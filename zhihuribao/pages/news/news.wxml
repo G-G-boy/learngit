@@ -1,0 +1,46 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='img'>
+
+<image src='{{list.image}}' class='img_image'></image>
+<view class='title'>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+
+
+
+{{list.title}}</view>
+<view class='images_source'>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br'></view>
+<view class='br2'></view>
+
+
+{{list.image_source}}</view>
+</view>
+
+
+<view class='content' id='story-content'>
+
+
+
+
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+
+</view>

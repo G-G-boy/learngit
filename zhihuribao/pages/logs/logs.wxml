@@ -1,0 +1,8 @@
+                                 <view class='item-card-card' wx:for='{{list}}'>
+                                  <image class='item-card-img' src='{{item.images.small}}'></image>
+                                  <view class='item-card-text'>{{item.title}}</view>
+                                  <view class='item-card-xin'>❤❤❤❤❤
+                                  <view class='item-card-xin-right'>{{item.rating.average}}</view> 
+                                  </view>
+                                  </view>
+                                

@@ -1,0 +1,107 @@
+<view class='body'> 
+<view ><van-search value="{{ value }}" placeholder="请输入搜索关键词" background="#1296db"/></view>
+<view class='hr'></view>
+    <view  class='item'>
+          <view class='item-header'>
+                <van-row gutter="20">
+                  <van-col span="15" offset="1"><view class='text-left'>{{list_title}}</view></van-col>
+
+                  <van-col span="7" offset="1"><view class='text-right' bindtap='gologs' data-aid='in_theaters'>查看更多></view></van-col>
+                </van-row>
+          </view>
+                  <scroll-view class='item-card' scroll-x style="width: 100%">
+                                  <view class='item-card-card' wx:for='{{list}}'>
+                                  <image class='item-card-img' src='{{item.images.small}}'></image>
+                                  <view class='item-card-text'>{{item.title}}</view>
+                                  <view class='item-card-xin'>❤❤❤❤❤
+                                  <view class='item-card-xin-right'>{{item.rating.average}}</view> 
+                                  </view>
+                                  </view>
+                                  
+                  </scroll-view>
+    </view>
+
+
+
+
+<view class='hr'></view>
+
+
+
+        <view  class='item'>
+          <view class='item-header'>
+                <van-row gutter="20">
+                  <van-col span="15" offset="1"><view class='text-left'>{{list_title1}}</view></van-col>
+
+                  <van-col span="7" offset="1"><view class='text-right' bindtap='gologs' data-aid='coming_soon'>查看更多></view></van-col>
+                </van-row>
+          </view>
+                  <scroll-view class='item-card' scroll-x style="width: 100%">
+                                  <view class='item-card-card' wx:for='{{list1}}'>
+                                  <image class='item-card-img' src='{{item.images.small}}'></image>
+                                  <view class='item-card-text'>{{item.title}}</view>
+                                  <view class='item-card-xin'>❤❤❤❤❤
+                                  <view class='item-card-xin-right'>{{item.rating.average}}</view> 
+                                  </view>
+                                  </view>
+                                  
+                  </scroll-view>
+    </view>
+
+
+
+<view class='hr'></view>
+
+
+
+
+
+
+            <view  class='item'>
+          <view class='item-header'>
+                <van-row gutter="20">
+                  <van-col span="15" offset="1"><view class='text-left'>{{list_title2}}</view></van-col>
+
+                  <van-col span="7" offset="1"><view class='text-right' bindtap='gologs' data-aid='new_movies'>查看更多></view></van-col>
+                </van-row>
+          </view>
+                  <scroll-view class='item-card' scroll-x style="width: 100%">
+                                  <view class='item-card-card' wx:for='{{list2}}'>
+                                  <image class='item-card-img' src='{{item.images.small}}'></image>
+                                  <view class='item-card-text'>{{item.title}}</view>
+                                  <view class='item-card-xin'>❤❤❤❤❤
+                                  <view class='item-card-xin-right'>{{item.rating.average}}</view> 
+                                  </view>
+                                  </view>
+                                  
+                  </scroll-view>
+    </view>
+
+
+
+
+<view class='hr'></view>
+
+
+
+            <view  class='item'>
+          <view class='item-header'>
+                <van-row gutter="20">
+                  <van-col span="15" offset="1"><view class='text-left'>{{list_title3}}</view></van-col>
+
+                  <van-col span="7" offset="1"><view class='text-right' bindtap='gologs' data-aid='top250'>查看更多></view></van-col>
+                </van-row>
+          </view>
+                  <scroll-view class='item-card' scroll-x style="width: 100%">
+                                  <view class='item-card-card' wx:for='{{list3}}'>
+                                  <image class='item-card-img' src='{{item.images.small}}'></image>
+                                  <view class='item-card-text'>{{item.title}}</view>
+                                  <view class='item-card-xin'>❤❤❤❤❤
+                                  <view class='item-card-xin-right'>{{item.rating.average}}</view> 
+                                  </view>
+                                  </view>
+                                  
+                  </scroll-view>
+    </view>
+    <view class='hr'></view>
+</view>

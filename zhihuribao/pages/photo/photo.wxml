@@ -1,0 +1,5 @@
+<image src="{{photo}}" class="image" mode="center"></image>
+<view class='btnbox'>
+  <van-button plain type="primary" bindtap='download' block class='btn'>下载到本地</van-button>
+  <van-button type="primary" block class='btn'>分享到盆友圈</van-button>
+</view>
