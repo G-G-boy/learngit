@@ -1,0 +1,23 @@
+
+<view hidden='{{footerhidden}}'>
+<view class='cengkaixia'></view>
+<view class='player' bindtap='Toaudioplay' >
+   <view class='playbox'>
+   <image class='playimg' src='{{img}}'></image>
+   <view class='text'>
+    <view class='singname '>{{songname}}</view>
+    <view class='singer '>{{author}}</view>
+   </view>
+   
+   <image class='playeritems' src='../../img/leibiao.png' catchtap="next" ></image>
+   <image class='playerbtn' src='../../img/start.png' wx:if="{{playerbtn}}" catchtap='playerbtn'></image>
+   <image class='playerbtn' src='../../img/stop.png' wx:else  catchtap='playerbtn'></image>
+   </view>
+</view>
+</view>
+
+
+
+
+
+

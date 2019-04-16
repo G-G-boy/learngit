@@ -1,0 +1,176 @@
+<!-- <view class='headerabsolute'>
+<view class="header">
+<image class='side-navigation-bar' src='../../img/celan.png'  bindtap="showModal" data-target="DrawerModalL"></image>
+<text>首页</text>
+</view>
+</view>
+<view class='swiper-bg'></view>
+<view class='header' style=' height: {{statusBarHeight + 130}}rpx;'></view>-->
+<view class='fixtop'>
+<view class='bg-mycolor' style='width:100%;height:{{statusBarHeight}}rpx'></view>
+<view class='newheader bg-mycolor'>
+<text class='newheadericon icon-sort'  bindtap="showModal" data-target="DrawerModalL"></text>
+ <text class='newheader-text'>首页</text>
+</view>
+</view>
+<view class='newheadercen bg-mycolor' style='width:100%;height:{{statusBarHeight+90}}rpx'></view>
+<view class='swiper-bg'></view>
+
+
+
+ <view class='search' bindtap='Tosearch'> 
+ <text class='icon-search'></text>
+   搜索
+</view> 
+
+
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}"  circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{imgUrls}}" wx:key>
+    <image src="{{item}}" mode='aspectFill' lazy-load='true'></image>
+  </swiper-item>
+</swiper>
+
+
+
+
+    <view class="flex  justify-around upjump">
+      <view class='margin-xs '>
+           <view class='btn-Box' bindtap='Topersonal_fm'>
+              <image class='btn-img' src='../../img/1.png'></image>
+              <text>私人FM</text>
+           </view>
+      </view>
+           <view class=' margin-xs radius'>
+           <view class='btn-Box' bindtap='Torecommend'>
+              <image class='btn-img' src='../../img/2.png'></image>
+              <text>每日推荐</text>
+           </view>
+      </view>
+            <view class=' margin-xs radius'>
+           <view class='btn-Box'  bindtap='Tosongsheet'>
+              <image class='btn-img' src='../../img/3.png'></image>
+              <text>歌单</text>
+           </view>
+      </view>
+            <view class=' margin-xs radius '>
+           <view class='btn-Box' bindtap='ToRankingList'>
+              <image class='btn-img' src='../../img/4.png'></image>
+              <text>排行榜</text>
+           </view>
+      </view>
+    </view>
+  <view class="cu-bar bg-white curheight ">
+    <view class='action'>
+      <text class='icon-titles text-mycolor'></text>
+      <text class='text-bold' bindtap='Tosongsheet'>推荐歌单</text>
+      <text class='icon-right text-grey' style='font-size: 30rpx;padding:20rpx;margin-top:5rpx;'></text>
+    </view>
+  </view>
+    <view class="grid gedan-center">
+     <block wx:for="{{Recommend_Songs}}" wx:key>
+            <view class='gedanBox' bindtap='Tosonglistdetails' data-id='{{item.id}}'>
+            <image class='gedan-img bgshadeTop' src='{{item.picUrl}}?param=200y200' lazy-load='true'></image>
+            <text>{{item.name}}</text>
+             <view class='singednumber icon-playfill'>{{item.playCount}}</view>
+         </view>
+     </block>
+    </view>
+
+
+
+     <view class="cu-bar bg-white curheight">
+    <view class='action'>
+      <text class='icon-titles text-mycolor'></text>
+      <text class='text-bold'>最新音乐</text>
+    </view>
+  </view>
+    <view class="grid gedan-center">
+     <block wx:for="{{newsongs}}" wx:key>
+            <view class='gedanBox' bindtap='Toaudioplay' data-id='{{item.id}}' data-src='{{item.song.album.picUrl}}?param=200y200' data-alltime='{{item.song.duration}}' data-name='{{item.name}}' data-artists='{{item.song.album.artists}}' data-playindex='{{index}}'>
+            <image class='gedan-img' src='{{item.song.album.blurPicUrl}}?param=200y200'  lazy-load='true'></image>
+            <text>{{item.name}}</text>
+         </view>
+     </block>
+    </view>
+
+
+
+    <!-- 侧边抽屉 -->
+<view class="cu-modal drawer-modal justify-start {{modalName=='DrawerModalL'?'show':''}}" bindtap='hideModal'>
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;">
+    <view class='cu-list menu text-left'>
+
+      <view class="bg-img bg-mask padding-tb-xl" style="background-image: url('http://pics.sc.chinaz.com/files/pic/pic9/201903/hpic740.jpg')">
+  <view class='padding-xl text-white'>
+ 
+ 
+  <view class="cu-avatar xl round margin-left" style="background-image:url(https://image.weilanwl.com/img/square-4.jpg);"></view>
+    <view class='padding-xs margin-left '>
+        我是一个名字
+    </view>
+  </view>
+</view>
+      
+
+                  <view class='cu-item '>
+                    <view class='content'>
+                    <view class='flex'>
+                     <text class='icon-favor text-mycolor padding-right-sm'></text>
+                      <view>我的收藏</view>
+                       </view>
+                    </view>
+                  </view>
+
+                  <view class='cu-item '>
+                    <view class='content'>
+                    <view class='flex'>
+                     <text class='icon-musicfill text-mycolor padding-right-sm'></text>
+                      <view>我的歌单</view>
+                       </view>
+                    </view>
+                  </view>
+                  <view class='cu-item '>
+                    <view class='content'>
+                      <view class='flex'>
+                     <text class='icon-like text-mycolor padding-right-sm'></text>
+                      <view>我喜欢的歌</view>
+                       </view>
+                    </view>
+                  </view>
+
+                   <view class='cu-item '>
+                    <view class='content'>
+                      <view class='flex'>
+                     <text class='icon-time text-mycolor padding-right-sm'></text>
+                      <view>历史播放</view>
+                       </view>
+                    </view>
+                  </view>
+
+                  <view class='cu-item '>
+                    <view class='content'>
+                      <view class='flex'>
+                     <text class='icon-community text-mycolor padding-right-sm'></text>
+                
+                        <button class='cu-btn  yijianbtn  bg-white' open-type='contact'>意见反馈</button>
+                       </view>
+                    </view>
+                  </view>
+
+                  
+                  <view class='cu-item ' bindtap='aboutme'>
+                    <view class='content'>
+                      <view class='flex'>
+                     <text class='icon-people text-mycolor padding-right-sm'></text>
+                      <view>about me</view>
+                       </view>
+                    </view>
+                  </view>
+
+    </view>
+  </view>
+</view>
+<!-- 侧边抽屉 -->
+
+<!-- 播放器 -->
+<footplayer id="footplayer"></footplayer>

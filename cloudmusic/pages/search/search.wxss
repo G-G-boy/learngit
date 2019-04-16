@@ -1,0 +1,192 @@
+page{background-color: #fff;}
+.headerTOP{
+  width: 100%;
+  height: 28rpx;
+}
+.positionab{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.headercen{
+  height: 128rpx;
+}
+
+.fixsearch{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  z-index: 1000;
+}
+
+.title{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.fl-text{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.fr-text{
+   font-size: 32rpx;
+   color: #999;
+}
+.search-hot{
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.player{
+  width: 100%;
+  height: 90rpx;
+   background-color: #fff;
+   margin-top: 20rpx;
+   margin-bottom:20rpx; 
+}
+.playbox{
+  position: relative;
+}
+.playimg{
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  margin: 10rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 32rpx;
+}
+.playbox .text{
+  width: 630rpx;
+  height: 90rpx;
+  float: left;
+  margin-left: 30rpx;
+}
+.playbox .text .singname{
+   color: #333;
+   width: 100%;
+   height: 45rpx;
+   line-height: 55rpx;
+   font-size: 28rpx;
+}
+.playbox .text .singer{
+  color: #787878;
+  width: 100%;
+   height: 45rpx;
+   line-height: 45rpx;
+  font-size: 24rpx;
+}
+
+.morebox{
+  height: 100%;
+  line-height: 90rpx;
+}
+.iconsize-more{
+  font-size: 40rpx;
+  padding-right: 30rpx;
+}
+
+/* new header */
+.fixtop{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.newheader{
+  width: 100%;
+  height: 90rpx;
+  position: relative;
+  display: flex;
+   align-items:center;
+   justify-content:center;
+      margin-top: -2rpx;
+}
+.newheader-text{
+  font-size: 30rpx;
+}
+.newheadericon{
+font-size: 50rpx;
+position: absolute;
+left: 30rpx;
+top: 20rpx;
+}
+
+
+
+
+.player2{
+  width: 100%;
+  height: 100rpx;
+   background-color: #fff;
+}
+.playbox{
+  position: relative;
+}
+.playimg2{
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  margin: 10rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 40rpx;
+
+}
+.playbox .text{
+  width: 578rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+.singname1{
+   width: 100%;
+   height: 45rpx;
+   line-height: 60rpx;
+   font-size: 26rpx;
+   display: flex;
+}
+.singer1{
+
+  width: 100%;
+   height: 45rpx;
+   line-height: 50rpx;
+  font-size: 22rpx;
+    display: flex;
+}
+
+
+.text-singname{
+    color: #333;
+}
+.text-singer{
+  color: #787878;
+}
+.nextcla{
+  display: flex;
+}
+
+
+
+.modaltop{
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.modaltopimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+}

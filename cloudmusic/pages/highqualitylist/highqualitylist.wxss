@@ -1,0 +1,106 @@
+page{background-color: #fff;}
+.headerTOP{
+  width: 100%;
+  height: 28rpx;
+}
+.positionab{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.headercen{
+  height: 128rpx;
+}
+
+.listbox{
+  width: 100%;
+  height: 260rpx;
+  padding-left: 5rpx;
+  position: relative;
+}
+.listbox .listbox-left{
+  float: left;
+  width: 240rpx;
+  height: 240rpx;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+.listbox .listbox-left .listimg{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.listbox .listbox-left text{
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  top: 8rpx;
+  right: 8rpx;
+  background-color: rgba(26, 24, 24, 0.418);
+  padding: 5rpx 10rpx 5rpx 10rpx;
+  border-radius: 36rpx;
+}
+.listbox .listbox-right{
+  float: right;
+  height: 100%;
+  width:480rpx;
+  display: flex;
+  flex-direction:column;
+  padding-right: 30rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.listbox .listbox-right .listname{
+  width: 100%;
+  font-size: 29rpx;
+  margin-top: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+.listbox .listbox-right .listauthor{
+  width: 100%;
+  color: #888;
+  font-size: 24rpx;
+    padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+.listbox .listbox-right .listtitle{
+  width: 100%;
+  height: 78rpx;
+  color: #666;
+  font-size: 24rpx;
+    padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+      display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+/* new header */
+.fixtop{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.newheader{
+  width: 100%;
+  height: 90rpx;
+  position: relative;
+  display: flex;
+   align-items:center;
+   justify-content:center;
+      margin-top: -2rpx;
+}
+.newheader-text{
+  font-size: 30rpx;
+}
+.newheadericon{
+font-size: 50rpx;
+position: absolute;
+left: 30rpx;
+top: 20rpx;
+}

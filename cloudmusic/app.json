@@ -1,0 +1,23 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/songlistdetails/songlistdetails",
+     "pages/songsheet/songsheet",
+    "pages/RankingList/RankingList",
+    "pages/recommend/recommend",
+    "pages/audioplay/audioplay",
+    "pages/highqualitylist/highqualitylist",
+    "pages/search/search"
+   
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black"
+  },
+  "requiredBackgroundModes":[
+    "audio"
+  ]
+}

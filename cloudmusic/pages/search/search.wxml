@@ -1,0 +1,146 @@
+<!-- <view class='positionab'>
+  <view class='headerTOP bg-mycolor'></view>
+  <view class="cu-bar bg-mycolor headerheight">
+    <view class='action'>
+      <text class='icon-back text-white' bindtap='goback'></text>
+    </view>
+    <view class='content text-bold'>
+      搜索
+    </view>
+  </view>
+</view>
+<view class='headercen'></view> -->
+<view class='fixtop'>
+<view class='bg-mycolor' style='width:100%;height:{{statusBarHeight}}rpx'></view>
+<view class='newheader bg-mycolor'>
+<text class='newheadericon icon-back_android' bindtap='goback' ></text>
+ <text class='newheader-text'>搜索</text>
+</view>
+</view>
+<view class='newheadercen bg-mycolor' style='width:100%;height:{{statusBarHeight+90}}rpx'></view>
+
+
+<view class='fixsearch' style='top:{{statusBarHeight+90}}rpx'>
+<form bindsubmit="formSubmit">
+  <view class="cu-bar search ">
+    <view class='search-form round'>
+      <text class="icon-search"></text>
+      <input type="text" placeholder="搜索" value='{{input_value}}' confirm-type="search" name="song" bindfocus="inputfocus"></input>
+    </view>
+    <view class='action'>
+      <button class='cu-btn bg-mycolor shadow-blur round' form-type='submit'>搜索</button>
+    </view>
+  </view>
+</form>
+</view>
+<view class='searchcen' style='width:100%;height:100rpx'></view>
+
+
+<view wx:if="{{search}}">
+  <view class='title cf'>
+    <view class='fl'>
+      <view class='fl-text'>热门搜索</view>
+    </view>
+  </view>
+
+  <block wx:for="{{search_hot}}" wx:key>
+    <button class='cu-btn round bg-gray search-hot' bindtap='setinput' data-value='{{item.first}}'>{{item.first}}</button>
+  </block>
+
+
+  <view class='title cf'>
+    <view class='fl'>
+      <view class='fl-text'>历史搜索</view>
+    </view>
+    <view class='fr'>
+      <text class='icon-delete fr-text' bindtap='clearhistory_search'></text>
+    </view>
+  </view>
+
+
+  <block wx:for="{{history_search}}" wx:key>
+    <button class='cu-btn round bg-gray search-hot' bindtap='setinput' data-value='{{item}}' hidden='{{hiddenhistory}}'>{{item}}</button>
+  </block>
+</view>
+<view wx:else>
+
+
+  <view class='player' wx:for="{{single}}" wx:key bindtap='Toaudioplay' data-id='{{item.id}}' data-src='{{item.al.picUrl}}?param=200y200' data-alltime='{{item.dt}}'  data-name='{{item.name}}' data-artists='{{item.ar}}' data-item='{{item}}' data-playindex='0'>
+    <view class='playbox'>
+      <view class='text'>
+        <view class='singname  text-cut'>{{item.name}}</view>
+        <view class='singer text-cut'>{{item.ar[0].name}}-{{item.al.name}}</view>
+      </view>
+      <view class='morebox'>
+        <!-- <text class='icon-moreandroid text-gray fr iconsize-more' catchtap='addnewsong'  data-id='{{item.id}}' data-src='{{item.al.picUrl}}?param=200y200' data-alltime='{{item.dt}}'  data-name='{{item.name}}' data-artists='{{item.ar}}' data-item='{{item}}'  data-playindex='0'></text> -->
+               <text class='icon-moreandroid text-gray fr iconsize-more' catchtap='showModal' data-target="bottomModal" data-id='{{item.id}}' data-src='{{item.al.picUrl}}?param=200y200' data-alltime='{{item.dt}}'  data-name='{{item.name}}' data-artists='{{item.ar}}'></text>
+      </view>
+
+    </view>
+  </view>
+
+<view class="cu-load bg-mycolor3 loading "></view>
+</view>
+
+
+
+
+
+
+
+
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}" bindtap='hideModal'>
+  <view class="cu-dialog">
+
+    <view class='bg-white yuanjiao modaltop' catchtap='false1'>
+     <image  class='modaltopimg' src='{{songsitem.coverImgUrl}}'></image>
+      <view class='text'>
+            <view class='singname1  text-cut text-singname'>歌曲:{{songsitem.name}}</view>
+            <view class='singer1 text-cut text-singer'>{{songsitem.art}}</view>
+          </view>
+    </view>
+
+
+    <view class='player2' bindtap='playnext'>
+      <view class='playbox'>
+        <view class="playimg2 icon-playfill"></view>
+        <view class='text'>
+          <view class='bg-white nextcla'>下一首播放</view>
+        </view>
+      </view>
+    </view>
+
+        <view class='player2'>
+      <view class='playbox'>
+        <view class="playimg2 icon-message"></view>
+        <view class='text'>
+          <view class='bg-white nextcla'>评论</view>
+        </view>
+      </view>
+    </view>
+
+        <view class='player2'>
+      <view class='playbox'>
+        <view class="playimg2 icon-share"></view>
+        <view class='text'>
+          <view class='bg-white nextcla'>分享</view>
+        </view>
+      </view>
+    </view>
+
+    
+        <view class='player2'>
+      <view class='playbox'>
+        <view class="playimg2 icon-people"></view>
+        <view class='text'>
+          <view class='bg-white nextcla'>歌手：{{songsitem.art}}</view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+<!-- 播放器 -->
+<footplayer id="footplayer"></footplayer>

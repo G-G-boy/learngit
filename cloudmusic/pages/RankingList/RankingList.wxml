@@ -1,0 +1,108 @@
+<!-- <view class='headerabsolute'>
+<view class="header">
+<text class='icon-back_android text-white iconsize' bindtap='goback'></text>
+<text class='header-text'>排行榜</text>
+</view>
+</view>
+<view class='header'></view> -->
+<view class='fixtop'>
+<view class='bg-mycolor' style='width:100%;height:{{statusBarHeight}}rpx'></view>
+<view class='newheader bg-mycolor'>
+<text class='newheadericon icon-back_android' bindtap='goback' ></text>
+ <text class='newheader-text'>排行榜</text>
+</view>
+</view>
+<view class='newheadercen bg-mycolor' style='width:100%;height:{{statusBarHeight+90}}rpx'></view>
+
+
+
+
+   <view class="cu-bar ">
+    <view class='action'>
+      <text class='text-lg text-bold'>官方榜</text>
+    </view>
+  </view>
+
+
+<block wx:for="{{Official}}" wx:key>
+<view class='itemcenter'  bindtap='Tosonglistdetails' data-id='{{item.id}}'>
+    <view class=" cf ">
+      <view class='fl'>
+        <image class='guang-img' src='{{item.coverImgUrl}}?param=200y200' lazy-load='true'></image>
+      </view>
+      <view class='fl padding-lg solid-bottom'>
+      <block  wx:for="{{item.tracks}}" wx:key>
+        <view class='text'>{{index+1}}.{{item.first}}-{{item.second}}</view>
+      </block>
+      </view>
+    </view>
+</view>
+</block>
+
+   <view class="cu-bar ">
+    <view class='action'>
+      <text class='text-lg text-bold'>推荐榜</text>
+    </view>
+  </view>
+
+
+      <view class="grid gedan-center">
+     <block wx:for="{{Recommend}}" wx:key>
+            <view class='gedanBox'  bindtap='Tosonglistdetails' data-id='{{item.id}}'>
+            <image class='gedan-img bgshadeTop' src='{{item.coverImgUrl}}?param=200y200' lazy-load='true'></image>
+            <text>{{item.name}}</text>
+             <view class='singednumber'>{{item.updateFrequency}}</view>
+         </view>
+     </block>
+    </view>
+
+
+
+       <view class="cu-bar ">
+    <view class='action'>
+      <text class='text-lg text-bold'>全球榜</text>
+    </view>
+  </view>
+
+
+      <view class="grid gedan-center">
+     <block wx:for="{{Global}}" wx:key>
+            <view class='gedanBox'  bindtap='Tosonglistdetails' data-id='{{item.id}}'>
+            <image class='gedan-img bgshadeTop' src='{{item.coverImgUrl}}?param=200y200' lazy-load='true'></image>
+            <text>{{item.name}}</text>
+             <view class='singednumber'>{{item.updateFrequency}}</view>
+         </view>
+     </block>
+    </view>
+
+
+
+
+       <view class="cu-bar ">
+    <view class='action'>
+      <text class='text-lg text-bold'>更多榜单</text>
+    </view>
+  </view>
+
+
+      <view class="grid more-center">
+     <block wx:for="{{more}}" wx:key>
+            <view class='gedanBox' bindtap='Tosonglistdetails' data-id='{{item.id}}'>
+            <image class='gedan-img bgshadeTop' src='{{item.coverImgUrl}}?param=200y200' lazy-load='true'></image>
+            <text>{{item.name}}</text>
+             <view class='singednumber'>{{item.updateFrequency}}</view>
+         </view>
+     </block>
+    </view>
+
+
+
+
+
+
+
+
+
+<!-- 播放器 -->
+<footplayer id="footplayer"></footplayer>
+

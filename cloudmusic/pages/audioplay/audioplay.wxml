@@ -1,0 +1,121 @@
+<!-- <view class='positionab'>
+  <view class='headerTOP bg-white'></view>
+  <view class="cu-bar bg-white headerheight">
+    <view class='action'>
+      <text class='icon-back text-black' bindtap='goback'></text>
+    </view>
+    <view class='content'>
+       <view class='titlebox flex justify-center'>
+           <view class='singname '>歌名</view>
+           <view class='author '></view>
+       </view>
+    </view>
+  </view>
+</view>
+<view class='headercen'></view> -->
+
+<view class='fixtop'>
+<view class='' style='width:100%;height:{{statusBarHeight}}rpx'></view>
+<view class='newheader '>
+<text class='newheadericon icon-back_android' bindtap='goback' ></text>
+ <view class='newheader-text text-cut'>{{name}}</view>
+ <view class='artists text-cut'>{{artists}}</view>
+</view>
+</view>
+<view class='newheadercen ' style='width:100%;height:{{statusBarHeight+90}}rpx'></view>
+
+<view class='picturebox'  bindtap='imgtablrc'  style="background-image: url('{{imgsrc}})no-repeat;">
+  <image class="picture {{imganimation?'animation-scale-down':''}}" src='{{imgsrc}}' mode='aspectFill' ></image>
+  </view>
+  <view class='scrollviewbox'   hidden="{{imgtablrc}}"  bindtap='lrctabimg' style="background-image: url('{{imgsrc}})no-repeat">
+<scroll-view
+    scroll-y
+    style="height: 760rpx;"
+    scroll-top="{{scrollTop}}rpx"
+    scroll-with-animation
+    class='scrollview'
+     bindscrolltolower="lower"
+  >
+<view class='Lyricbox'>
+<view wx:for="{{lines}}" wx:key>
+  <view class="lyrictext  {{lineNum==index ||lineNum== (length - 1)?'text-mycolor nowtext':''}}" id="'_{{index}}'">{{item.txt}}</view>
+  </view>
+</view>
+  </scroll-view>
+
+</view>
+ 
+
+ <view class='operationBox'>
+ 
+       <view class="flex  justify-center">
+      <text class='text-white  icon-like iconsizesm padding-lg'></text>
+      <text class=' icon-mark text-white iconsizesm padding-lg'></text>
+      <text class='icon-down text-white iconsizesm padding-lg'></text>
+      <text class='icon-moreandroid text-white iconsizesm padding-lg'></text>
+      
+    </view>
+ 
+ </view>
+
+
+
+   <view class='progressBox'>
+    <view class="flex  align-center ">
+      <text class='text-white padding-musicTime'>{{musicTime}}</text>
+        <view class='slider-size'>
+        <slider  activeColor=" #4fd4f3" block-size="12" bindchange='audioChange' bindchanging='audioChanging' value='{{sliderValue}}'></slider>
+        </view>
+      <text class='text-white padding-allmusictime'>{{allmusictime}}</text>
+    </view>
+    </view>
+
+
+    
+
+
+
+<view class='playerBox'>
+     <view class="flex   justify-between">
+    
+       <text class="text-white  icon-{{modebtn?'we':'musicfill'}} iconsizesm" bindtap='modebindtap'></text>
+         <text class='text-mycolor  icon-backwardfill iconsizesmlg' bindtap='cutPrev'></text>
+        <text class="text-mycolor  icon-{{centerbtn?'stop':'playfill'}}  iconsizexl" bindtap='centerbindtap'></text>
+         <text class='text-mycolor  icon-play_forward_fill iconsizesmlg' bindtap='cutNext'></text>
+          <text class='text-white  icon-sort iconsizesm' bindtap="showModal" data-target="bottomModal"></text>
+     
+    </view>
+</view>
+
+
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}" bindtap='hideModal'>
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white yuanjiao " catchtap='false1'>
+      <view class='action text-black '>歌曲列表({{playlist.length}})</view>
+      <view class='action text-black icon-delete' bindtap='delall'>清空列表</view>
+    </view>
+<scroll-view scroll-y="true" style='height:800rpx;'>
+
+
+   <view class='player' wx:for="{{playlist}}" wx:key bindtap='playit' data-playindex='{{index}}'>
+   <view class='playbox'>
+   <view class="playimg {{app_playindex == index?'text-mycolor':'text-grey'}}">{{index+1}}</view>
+
+   <view class='text'>
+    <view class="  text-cut {{app_playindex == index?'text-mycolor':'text-singname'}} singname">{{item.name}}</view>
+    <view class=" text-cut  {{app_playindex == index?'text-mycolor':'text-singer'}} singer">{{item.art}}</view>
+   </view>
+   <view class='morebox'>
+     <text class='icon-notification text-mycolor  iconsize-more' wx:if="{{app_playindex == index}}"></text>
+     <text class='icon-close text-gray  iconsize-more' catchtap='delthesong' data-theindex='{{index}}' wx:else></text>
+
+   </view>
+  
+   </view>
+</view>
+
+
+
+</scroll-view>
+  </view>
+</view>

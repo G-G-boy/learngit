@@ -1,0 +1,262 @@
+.headerTOP{
+  width: 100%;
+  height: 28rpx;
+}
+.positionab{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.headercen{
+  height: 126rpx;
+}
+
+.songlistdetail{
+  width: 100%;
+  height: 480rpx;
+  margin: 0 auto;
+  background-color: #D0D0D0;
+  position: relative;
+   box-sizing:border-box;
+   background-size: 100% 100%;
+    z-index:-1;
+}
+.songlistdetail::after{
+  content: "";
+    width:200%;
+    height:200%;
+    position: absolute;
+    left:-50%;
+    top:-50%;
+    background: inherit;
+    filter: blur(40px);
+    z-index: -2;
+}
+.songlistdetail-top{
+  width: 100%;
+  height: 300rpx;
+
+  position: relative;
+}
+.songlistdetail-top .img{
+  width: 250rpx;
+  height: 250rpx;
+  float: left;
+  margin: 24rpx;
+  border-radius: 8rpx;
+}
+.songlistdetail-top .songlistdetail-top-left{
+  float: right;
+  width: 405rpx;
+  height: 250rpx;
+  margin: 25rpx;
+}
+.songlistname{
+  width: 100%;
+  height: 100rpx;
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: bold;
+  padding-top: 25rpx;
+}
+.songlistdetail-top-left-bottom{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  color: #fff;
+  display: flex;
+}
+.authorimg{
+   width: 50rpx;
+   height: 50rpx;
+   border-radius: 50rpx;
+   margin-right: 15rpx;
+   margin-top: 25rpx;
+}
+.authorname{
+  width: 310rpx;
+}
+.iconsizesm{
+  font-size: 45rpx;
+}
+.iconbox{
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.item-top{
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  position: absolute;
+  bottom: 0;
+  border-top-right-radius: 20rpx;
+  border-top-left-radius: 20rpx;
+}
+.leftbox{
+  height: 90rpx;
+ border-top-right-radius: 20rpx;
+}
+
+
+
+
+
+.player{
+  width: 100%;
+  height: 100rpx;
+   background-color: #fff;
+   z-index: 1000;
+}
+.playbox{
+  position: relative;
+}
+.playimg{
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  margin: 10rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 32rpx;
+
+}
+.playbox .text{
+  width: 578rpx;
+  height: 90rpx;
+  float: left;
+  margin-left: 10rpx;
+
+}
+.playbox .text .singname{
+   color: #333;
+   width: 100%;
+   height: 45rpx;
+   line-height: 60rpx;
+   font-size: 26rpx;
+}
+.playbox .text .singer{
+  color: #787878;
+  width: 100%;
+   height: 45rpx;
+   line-height: 50rpx;
+  font-size: 22rpx;
+}
+
+.morebox{
+  height: 100%;
+  line-height: 90rpx;
+}
+.iconsize-more{
+  font-size: 40rpx;
+
+
+}
+/* new header */
+.fixtop{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.newheader{
+  width: 100%;
+  height: 90rpx;
+  position: relative;
+  display: flex;
+   align-items:center;
+   justify-content:center;
+      margin-top: -2rpx;
+}
+.newheader-text{
+  font-size: 30rpx;
+}
+.newheadericon{
+font-size: 50rpx;
+position: absolute;
+left: 30rpx;
+top: 20rpx;
+}
+
+
+.player{
+  width: 100%;
+  height: 100rpx;
+   background-color: #fff;
+}
+.playbox{
+  position: relative;
+}
+.playimg2{
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  margin: 10rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 40rpx;
+
+}
+.playbox .text{
+  width: 578rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+.singname{
+   width: 100%;
+   height: 45rpx;
+   line-height: 60rpx;
+   font-size: 26rpx;
+   display: flex;
+}
+.singer{
+
+  width: 100%;
+   height: 45rpx;
+   line-height: 50rpx;
+  font-size: 22rpx;
+    display: flex;
+}
+
+.morebox{
+  height: 100%;
+  line-height: 90rpx;
+}
+.iconsize-more{
+  font-size: 40rpx;
+  padding: 15rpx;
+}
+.text-singname{
+    color: #333;
+}
+.text-singer{
+  color: #787878;
+}
+.nextcla{
+  display: flex;
+}
+
+
+
+.modaltop{
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.modaltopimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin-left: 40rpx;
+  margin-right: 20rpx;
+}

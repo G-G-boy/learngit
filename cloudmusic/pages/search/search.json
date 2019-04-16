@@ -1,0 +1,6 @@
+{
+  "onReachBottomDistance": 100,
+  "usingComponents": {
+    "footplayer": "../../components/footplayer/footplayer"
+  }
+}

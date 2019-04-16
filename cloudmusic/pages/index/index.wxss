@@ -1,0 +1,139 @@
+page{background-color: #fff;}
+.headerabsolute{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.header{
+  width: 100%;
+ 
+  background-color: #4fd4f3;
+  color: #fff;
+  line-height: 170rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+.search{
+  width: 92%;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 50rpx;
+  background-color: #fff;
+  z-index: 2000;
+  margin: 20rpx auto 0;
+  color: #888;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+}
+.header text{
+  margin-left: 272rpx;
+}
+.side-navigation-bar{
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 86rpx;
+  margin-left: 30rpx;
+}
+.swiper-bg{
+  width: 100%;
+  height: 300rpx;
+  background-color: #4fd4f3;
+  position: absolute;
+  top: 128rpx;
+  z-index: -2;
+}
+.btn-Box{
+  width: 120rpx;
+  height: 160rpx;
+  text-align: center;
+}
+.btn-Box .btn-img{
+  width: 100%;
+  height: 120rpx;
+  margin-bottom: 6rpx;
+}
+.btn-Box text{
+  color: #787878;
+  font-size: 24rpx;
+}
+.upjump{
+  margin-top: -50rpx;
+}
+.gedanBox{
+  width: 220rpx;
+  height:280rpx;
+  margin: 10rpx;
+  position: relative;
+}
+.gedan-img{
+  width: 100%;
+  height: 220rpx;
+  border-radius: 8rpx;
+  margin-bottom: 5rpx;
+}
+.gedanBox text{
+  font-size: 24rpx;
+  color: #4d4d4d;
+    overflow: hidden;
+      display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.gedan-center{
+   margin-left: 14rpx;
+   height: auto;
+   overflow: hidden;
+}
+.singednumber{
+  position: absolute;
+  top: 6rpx;
+  right: 10rpx;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 3rpx 10rpx 3rpx 10rpx;
+  border-radius: 34rpx;
+  background-color: rgba(34, 32, 32, 0.356);
+}
+.bgshadeTop{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.932), rgba(0, 0, 0, 0.01));
+}
+
+
+
+
+
+/* new header */
+.fixtop{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.newheader{
+  width: 100%;
+  height: 90rpx;
+  position: relative;
+  display: flex;
+   align-items:center;
+   justify-content:center;
+   margin-top: -2rpx;
+}
+.newheader-text{
+  font-size: 30rpx;
+}
+.newheadericon{
+font-size: 50rpx;
+position: absolute;
+left: 30rpx;
+top: 20rpx;
+}
+
+.yijianbtn{
+  position: absolute;
+  left: 54rpx;
+  top: 15rpx;
+  color: #000;
+}

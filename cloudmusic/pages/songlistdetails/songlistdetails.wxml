@@ -1,0 +1,142 @@
+<!-- <view class='positionab'>
+  <view class='headerTOP bg-mycolor'></view>
+  <view class="cu-bar bg-mycolor headerheight">
+    <view class='action'>
+      <text class='icon-back text-white' bindtap='goback'></text>
+    </view>
+    <view class='content text-bold'>
+      歌单
+    </view>
+  </view>
+</view>
+<view class='headercen'></view> -->
+<view class='fixtop'>
+  <view class='bg-mycolor' style='width:100%;height:{{statusBarHeight}}rpx'></view>
+  <view class='newheader bg-mycolor'>
+    <text class='newheadericon icon-back_android' bindtap='goback'></text>
+    <text class='newheader-text'>{{playlist.name}}</text>
+  </view>
+</view>
+<view class='newheadercen bg-mycolor' style='width:100%;height:{{statusBarHeight+90}}rpx'></view>
+
+
+<view class='songlistdetail' style="background-image: url('{{cover}}')">
+  <view class='songlistdetail-top'>
+    <image class='img' src='{{cover}}'></image>
+    <view class='songlistdetail-top-left'>
+      <view class='songlistname'>{{playlist.name}}</view>
+      <view class='songlistdetail-top-left-bottom'>
+        <image class='authorimg' src='{{playlist.creator.avatarUrl}}?param=200y200' lazy-load='true'></image>
+        <view class='authorname text-cut'>{{playlist.creator.nickname}}
+          <text class='icon-right'></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="flex  justify-center  iconbox ">
+    <text class='text-white  icon-like iconsizesm padding-lr margin-lr'></text>
+    <text class=' icon-mark text-white iconsizesm padding-lr margin-lr'></text>
+    <text class='icon-down text-white iconsizesm padding-lr margin-lr'></text>
+    <text class='icon-roundcheck text-white iconsizesm padding-lr margin-lr'></text>
+  </view>
+
+
+  <view class='item-top bg-white '>
+    <view class='cf'>
+      <view class='fl text-black padding-lr'>
+        <view class='flex' bindtap='Toaudioplay' data-playindex='0'>
+          <view class='icon-playfill text-black iconsize icon-view '></view>
+          <view class='padding-lr'>播放全部(共{{playlist.trackIds.length}}首)</view>
+        </view>
+      </view>
+      <view class='fr'>
+        <view class='leftbox bg-mycolor padding-lr'>
+          <text class='icon-add'>收藏({{playlist.subscribedCount}})</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+
+<view class='player' wx:for="{{songs}}" wx:key bindtap='Toaudioplay' data-id='{{item.id}}' data-src='{{item.al.picUrl}}?param=200y200' data-alltime='{{item.dt}}' data-name='{{item.name}}' data-artists='{{item.ar}}' data-playindex='{{index}}'>
+  <view class='playbox'>
+    <view class='playimg text-grey'>{{index+1}}</view>
+
+    <view class='text'>
+      <view class='singname  text-cut'>{{item.name}}</view>
+      <view class='singer text-cut'>
+        <!-- <block wx:for="{{item.ar}}" wx:key>{{item.name}} </block>- {{item.al.name}}</view> -->
+         {{item.art}} - {{item.al.name}}</view>
+    </view>
+    <view class='morebox'>
+      <text class='icon-moreandroid text-gray  iconsize-more' catchtap='showModal' data-target="bottomModal" data-songsitem='{{item}}'></text>
+    </view>
+
+  </view>
+</view>
+
+
+
+
+
+
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}" bindtap='hideModal'>
+  <view class="cu-dialog">
+
+    <view class='bg-white yuanjiao modaltop' catchtap='false1'>
+     <image  class='modaltopimg' src='{{songsitem.coverImgUrl}}'></image>
+      <view class='text'>
+            <view class='singname  text-cut text-singname'>歌曲:{{songsitem.name}}</view>
+            <view class='singer text-cut text-singer'>{{songsitem.art}}</view>
+          </view>
+    </view>
+
+
+    <view class='player' bindtap='playnext'>
+      <view class='playbox'>
+        <view class="playimg2 icon-playfill"></view>
+        <view class='text'>
+          <view class='bg-white nextcla'>下一首播放</view>
+        </view>
+      </view>
+    </view>
+
+        <view class='player'>
+      <view class='playbox'>
+        <view class="playimg2 icon-message"></view>
+        <view class='text'>
+          <view class='bg-white nextcla'>评论</view>
+        </view>
+      </view>
+    </view>
+
+        <view class='player'>
+      <view class='playbox'>
+        <view class="playimg2 icon-share"></view>
+        <view class='text'>
+          <view class='bg-white nextcla'>分享</view>
+        </view>
+      </view>
+    </view>
+
+    
+        <view class='player'>
+      <view class='playbox'>
+        <view class="playimg2 icon-people"></view>
+        <view class='text'>
+          <view class='bg-white nextcla'>歌手：{{songsitem.art}}</view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</view>
+
+
+<!-- 播放器 -->
+<footplayer id="footplayer"></footplayer>

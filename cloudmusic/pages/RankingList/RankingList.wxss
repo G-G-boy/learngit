@@ -1,0 +1,117 @@
+page{background-color: #fff;}
+.headerabsolute{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.header{
+  width: 100%;
+  height: 128rpx;
+  background-color: #4fd4f3;
+  color: #fff;
+  line-height: 170rpx;
+  font-size: 30rpx;
+  position: relative;
+}
+.header .iconsize{
+  margin-left: 30rpx;
+  font-size: 50rpx;
+}
+.header .header-text{
+  margin-left: 247rpx;
+}
+.side-navigation-bar{
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 68rpx;
+  margin-left: 30rpx;
+}
+
+
+
+.itemcenter{
+  width: 96%;
+  margin: 0 auto;
+}
+.guang-img{
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 8rpx;
+  margin-top: 7rpx;
+}
+.itemcenter  .text{
+  width: 420rpx;
+  margin-bottom: 14rpx;
+  font-size: 28rpx;
+  color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+
+.gedanBox{
+  width: 220rpx;
+  height:280rpx;
+  margin: 10rpx;
+  position: relative;
+}
+.gedan-img{
+  width: 100%;
+  height: 220rpx;
+  border-radius: 8rpx;
+  margin-bottom: 5rpx;
+}
+.gedanBox text{
+  font-size: 24rpx;
+  color: #4d4d4d;
+}
+.gedan-center{
+   margin-left: 14rpx;
+   height: 600rpx;
+   overflow: hidden;
+}
+.singednumber{
+  position: absolute;
+  bottom: 72rpx;
+  left: 15rpx;
+  color: #fff;
+  font-size: 22rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding:4rpx 10rpx 4rpx 10rpx;
+  border-radius: 38rpx;
+}
+
+.more-center{
+   margin-left: 14rpx;
+}
+
+
+/* new header */
+.fixtop{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.newheader{
+  width: 100%;
+  height: 90rpx;
+  position: relative;
+  display: flex;
+   align-items:center;
+   justify-content:center;
+      margin-top: -2rpx;
+}
+.newheader-text{
+  font-size: 30rpx;
+}
+.newheadericon{
+font-size: 50rpx;
+position: absolute;
+left: 30rpx;
+top: 20rpx;
+}

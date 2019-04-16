@@ -1,0 +1,39 @@
+<!-- <view class='positionab'>
+  <view class='headerTOP bg-mycolor'></view>
+  <view class="cu-bar bg-mycolor headerheight">
+    <view class='action'>
+      <text class='icon-back text-white' bindtap='goback'></text>
+    </view>
+    <view class='content text-bold'>
+      精品歌单
+    </view>
+  </view>
+</view>
+<view class='headercen'></view> -->
+<view class='fixtop'>
+<view class='bg-mycolor' style='width:100%;height:{{statusBarHeight}}rpx'></view>
+<view class='newheader bg-mycolor'>
+<text class='newheadericon icon-back_android' bindtap='goback' ></text>
+ <text class='newheader-text'>精品歌单</text>
+</view>
+</view>
+<view class='newheadercen bg-mycolor' style='width:100%;height:{{statusBarHeight+90}}rpx'></view>
+
+
+
+<block wx:for="{{highqualitylist}}" wx:key>
+<view class='listbox' bindtap='Tosonglistdetails' data-id='{{item.id}}'>
+  <view class='listbox-left'>
+    <image class='listimg' src='{{item.coverImgUrl}}?param=200y200' lazy-load='true'></image>
+    <text class='icon-playfill'>{{item.playCount}}</text>
+  </view>
+  <view class='listbox-right'>
+    <view class='listname'>{{item.name}}</view>
+    <view class='listauthor'>by {{item.nickname}}</view>
+    <view class='listtitle'>{{item.copywriter}}</view>
+  </view>
+</view>
+</block>
+<view class="cu-load bg-mycolor3 loading "></view>
+<!-- 播放器 -->
+<footplayer id="footplayer"></footplayer>
